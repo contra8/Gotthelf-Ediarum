@@ -1,0 +1,70 @@
+Berlin-Brandenburgische Akademie der Wissenschaften 
+TELOTA - The electronic Life of the Academy
+http://telotadev.bbaw.de/oxygen/gotthelf/update.xml
+
+------------------------------------------------------------------------------------------------
+
+ediarum - HKG Gotthelf
+Framework (Dokumenttyp Zuordnung) für Oxygen XML 
+
+
+
+
+CHANGELOG
+------------------------------------------------------------------------------------------------
+Änderung
+
+1.2.1 vom 18.04.2016
+	Drucktexte:
+	* FEATURE: Neue Aktionen für Sonderzeichen.
+	
+	Manuskripte:
+	* FEATURE: Neue Aktionen für Sonderzeichen.
+
+1.1.0 vom 10.07.2015
+
+	Drucktexte:
+	* FEATURE: Neue Aktionen für Registerverknüpfungen (Orte, Personen, Werke).
+	* FEATURE: Neue Aktion für Lemmaauszeichnung für den Kommentar.
+	* FEATURE: CSS für Registerverknüpfungen.
+	* UPDATE: CSS Anpassungen von Zeilenumbrüchen und Seitenwechseln.
+	* UPDATE: CSS Anpassungen Hervorhebungen.
+	* UPDATE: CSS Anpassung für Spatium.
+	* FEATURE: Neue Aktionen für Sonderzeichen.
+	* FEATURE: Neue Aktion für Illustration.
+	* FEATURE: Neue Aktion für Zeilenumbruch.
+	* FEATURE: Neue Aktion für Seitenwechsel.
+	* FEATURE: Neue Aktion für Spatium.
+	* FEATURE: Neue Aktion für Unterstreichung.
+	* FEATURE: Neue Aktion für Antiqua.
+	* FEATURE: Neue Aktion für Schriftgröße.
+	* FEATURE: Neue Aktion für Kursiv.
+	* FEATURE: Neue Aktion für Fett.
+	* FEATURE: Neue Aktion für Gesperrt.
+	* FEATURE: Neue Aktion für Hochstellung.
+	* FEATURE: Neue Aktion für Tiefstellung.
+	
+	Personenregister:
+	* FEATURE: Neues CSS für alle Elemente.
+	* FEATURE: Neue Aktionen für neuen Gliederungspunkt.
+	* FEATURE: Neue Aktionen für neue Person.
+	* FEATURE: Neue Aktionen für neue Gruppe.
+	* FEATURE: Neue Aktionen für neue Gruppenmitglieder.
+	* FEATURE: Neue Aktionen für neue Personenbeschreibungen (Normdaten, Funktionen, Beziehung, Siehe und Siehe auch).
+	* FEATURE: Neue Aktionen für Textauszeichnungen (Kommentar, Generationsname, Zus. Name, Datum, Ort, Name, Organisation).
+	* FEATURE: Neue Aktionen für Registerverknüpfungen (Orte, Personen).
+
+	Ortsregister:
+	* FEATURE: Neues CSS für alle Elemente.
+	* FEATURE: Neue Aktionen für neuen Gliederungspunkt.
+	* FEATURE: Neue Aktionen für neuen Ort.
+	* FEATURE: Neue Aktionen für neue Ortsverweis.
+	* FEATURE: Neue Aktionen für neue Ortsbeschreibungen (Region, Link, Beschreibung und Siehe auch).
+	* FEATURE: Neue Aktion für Registerverknüpfung Orte.
+	
+	Werkregister:
+	* FEATURE: Neues CSS für alle Elemente.
+	* FEATURE: Neue Aktionen für neuen Gliederungspunkt.
+	* FEATURE: Neue Aktionen für neues Werk.
+	* FEATURE: Neue Aktionen für neue Werkbeschreibungen (Autor, Edition, Datum, Kommentarverweise mit und ohne Text).
+	

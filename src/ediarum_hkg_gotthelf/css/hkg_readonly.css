@@ -1,0 +1,22 @@
+/* 
+Copyright 2015 Berlin-Brandenburg Academy of Sciences and Humanities
+*/
+
+/* CSS um Bearbeitungen in Dateien, die nur gelesen werden sollen zu verhindern */
+
+list {
+    -oxy-editable: false;
+    border-left: 10px solid red;
+    background-image: url(gfx/bg_readonly.png);
+    background-repeat: repeat-y;
+	display: block;
+	-oxy-display-tags: none;
+}
+
+list item {
+	content: " - ";
+    border-left: 5px solid white;
+	display: block;
+	-oxy-display-tags: none;
+	margin-bottom: 10px;
+}

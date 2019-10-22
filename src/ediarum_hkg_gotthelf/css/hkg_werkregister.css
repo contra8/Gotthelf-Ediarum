@@ -1,0 +1,243 @@
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+@namespace xml url('http://www.w3.org/XML/1998/namespace');
+
+oxy|comment{
+    display:none ! important;
+}
+
+oxy|comment {
+    display: none ! important;
+}
+
+
+teiHeader {
+    padding-bottom: 2em;
+	background-color: #BDCBD3;
+	padding: 1em;
+	padding-top: 0em;
+}
+
+titleStmt > title {
+	color: white;
+    display: block;
+    text-align:left;
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    background-color: #AB0805;
+	padding: 0.5em;
+}
+
+publicationStmt, sourceDesc{
+	background-color: #E8E8EB;
+    display: block;
+    text-align: left;
+	padding: 0.5em 1em;
+}
+
+publicationStmt>p,sourceDesc>p {
+	background-color: white;
+	-oxy-display-tags: none;
+	padding: 0em 0.5em;
+}
+
+publicationStmt:before {
+	content: "publicationStmt: ";
+    font-weight: bold;
+	width: 10em;
+}
+
+sourceDesc:before {
+	content: "sourceDesc: ";
+    font-weight: bold;
+	width: 10em;
+}
+
+text {
+	background-color: #BDCBD3;
+	padding-bottom: 1em;
+}
+
+front {
+    margin-bottom: 3em;
+    margin-left: 1em;
+}
+
+head {
+    display: block;
+    font-size: 24px;
+    font-weight:bold;
+	color: #AB0805;
+}
+
+div > p {
+    display: block;
+	margin: 0.5em 0em;
+}
+
+body > div{
+    -oxy-foldable: true;
+	-oxy-folded:true;
+}
+body > div:before {
+    display:block;
+    content:attr(n);
+    font-size: 24px;
+    font-weight:bold;
+    color: #AB0805;
+}
+
+ab:before {
+    content: "ID: " attr("xml:id");	
+	text-align: right;
+	width: 100%;
+	font-size: small;
+}
+
+ab {
+    display: block;
+    margin: 0.5em 0em 2em;
+	margin-right: 1em;
+    padding: 0em 1em;
+	padding-bottom: 2em;
+	background-color: #E8E8EB;
+}
+
+
+ab[type='group'] {
+    display: block;
+    border:thin solid #007744;
+    margin: 0.5em;
+    padding: 0.2em;
+}
+
+seg {
+	margin: 0.5em 0em;
+}
+
+
+/*--Werke-------------------------------------------------------------*/
+
+/* ***** Werk ***** */
+seg[type = 'workName']{
+    display:block;
+}
+
+seg[type = 'workName'] > bibl {
+	display: block;
+}
+
+/* ***** Verweis ***** */
+seg[type='workName'] > bibl[sameAs] > title:after{
+    content: " " oxy_url("gfx/link_register.png");
+    link: attr(sameAs);
+}
+
+/* ***** Titel ***** */
+seg[type = 'workName'] > bibl > title{
+    font-weight: bold;
+	font-size: 20px;
+	-oxy-display-tags: none;
+	content: oxy_textfield(edit, '#text', columns, 40, fontInherit, true);
+	visibility:-oxy-collapse-text;
+    -oxy-placeholder-content: "Ortsname";
+	margin-bottom: 1em;
+}
+
+/* ***** Autor ***** */
+seg[type = 'workName'] > bibl > author:before {
+	display: block;
+    color: #AB0805;
+    font-weight:bold;
+	content: "Autor";
+}
+
+seg[type = 'workName'] > bibl > author {
+	margin-left: 0em;
+	display: block;
+	content: "   " oxy_textfield(edit, '#text', columns, 20, fontInherit, true);
+	visibility:-oxy-collapse-text;
+	margin-top: 0.5em;
+}
+
+/* ***** Edition ***** */
+seg[type = 'workName'] > bibl > edition:before {
+	display: block;
+    color: #AB0805;
+    font-weight:bold;
+	content: "Edition";
+}
+
+seg[type = 'workName'] > bibl > edition {
+	margin-left: 0em;
+	display: block;
+	content: "   " oxy_textfield(edit, '#text', columns, 20, fontInherit, true);
+	visibility:-oxy-collapse-text;
+	margin-top: 0.5em;
+}
+
+/* ***** Datum ***** */
+seg[type = 'workName'] > bibl > date:before {
+	display: block;
+    color: #AB0805;
+    font-weight:bold;
+	content: "Datum";
+}
+
+seg[type = 'workName'] > bibl > date {
+	margin-left: 0em;
+	display: block;
+	content: "   " oxy_textfield(edit, '#text', columns, 20, fontInherit, true);
+	visibility:-oxy-collapse-text;
+	margin-top: 0.5em;
+}
+
+/* ***** Kommentarverweise ***** */
+seg[type = 'ref1'],
+seg[type = 'ref2']{
+    display:block;
+}
+seg[type = 'ref1']:before{
+    content: "Kommentarverweise";
+    color: #AB0805;
+    font-weight:bold;
+}
+
+seg[type = 'ref2']:before{
+    content: "Weitere Kommentarverweise";
+    color: #AB0805;
+    font-weight:bold;
+}
+
+seg[type = 'ref1'] > list,
+seg[type = 'ref2'] > listRef{
+    display:block;
+    margin-left: 1em;
+}
+
+seg[type = 'ref1'] > list > item {
+    display: block;
+	background-color: white;
+	margin: 0.5em 0em;
+	width: 23em;
+}
+
+seg[type = 'ref2'] > listRef > ptr{
+    display: block;
+	margin: 0.5em 0em;
+}
+
+seg[type = 'ref1'] > list > item > ptr,
+seg[type = 'ref2'] > listRef > ptr{
+    content: oxy_textfield(edit, "@target", columns, 10);
+	background-color: #E8E8EB;
+	-oxy-display-tags: none;
+}
+
+/*
+seg[type = 'ref1'] > list > item > ptr:after,
+seg[type = 'ref2'] > listRef > ptr:after {
+    content: " " oxy_url("gfx/link_register.png") " ";
+    link: attr(target);   
+}
+*/

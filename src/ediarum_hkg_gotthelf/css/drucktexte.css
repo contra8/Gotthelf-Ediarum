@@ -1,0 +1,310 @@
+TEI{
+
+}
+
+teiHeader{
+	display: block;
+	background-color:#BDCBD3;
+	padding: 1em;
+	padding-top: 0em;
+}
+fileDesc>titleStmt{
+	color: white;
+    display: block;
+    text-align:left;
+    font-weight: bold;
+	font-size:48px;
+    padding-bottom: 0.5em;
+    background-color: #AB0805;
+	padding: 0.5em;
+}
+titleStmt title{
+	font-size:36px;
+	display:block;
+	margin-bottom:0.5em;
+}
+titleStmt author{
+	font-size:24px;
+	display:block;
+}
+editionStmt, publicationStmt, seriesStmt, notesStmt, sourceDesc, encodingDesc projectDesc, encodingDesc samplingDecl, revisionDesc{
+	padding: 0.5em 1em;
+	display:block;
+	background-color: #E8E8EB;
+	/* font-size:12px; */
+}
+editionStmt:before{
+	content:"Edition";
+	font-weight:bold;
+	display:block;
+}
+publicationStmt:before{
+	content:"Impressum";
+	font-weight:bold;
+	display:block;
+}
+seriesStmt:before{
+	content:"Reihenangaben";
+	font-weight:bold;
+	display:block;
+}
+notesStmt:before{
+	content:"Anmerkungen";
+	font-weight:bold;
+	display:block;
+}
+sourceDesc:before{
+	content:"Quellen";
+	font-weight:bold;
+	display:block;
+}
+encodingDesc projectDesc:before{
+	content:"Editionsrichtlinien";
+	font-weight:bold;
+	display:block;
+}
+encodingDesc samplingDecl:before{
+	content:"Zusammenstellung der Datei";
+	font-weight:bold;
+	display:block;
+}
+revisionDesc:before{
+	content:"Bearbeitung der Datei";
+	font-weight:bold;
+	display:block;
+}
+editionStmt edition, editionStmt respStmt, publicationStmt publisher, publicationStmt address, seriesStmt respStmt{
+	display:block;	
+	padding-bottom:0.5em;
+}
+editionStmt edition, publicationStmt publisher, publicationStmt address addrLine, seriesStmt respStmt resp, seriesStmt respStmt name, encodingDesc projectDesc p, encodingDesc samplingDecl p{
+	display: block;
+	background-color: white;
+	-oxy-display-tags: none;
+	padding: 0em 0.5em;
+	margin:0.5em 0em;
+	width:50em;
+}
+publicationStmt address addrLine{
+	display:inline;
+}
+editionStmt respStmt name{
+	background-color: white;
+	-oxy-display-tags: none;
+	padding: 0em 0.5em;
+	width:18em;
+}
+editionStmt respStmt resp:before{
+	content: " ( ";
+	background-color:#E8E8EB;
+}
+editionStmt respStmt resp:after{
+	content: " ) ";
+	background-color:#E8E8EB;
+}
+editionStmt respStmt resp{
+	background-color: white;
+	-oxy-display-tags: none;
+}
+seriesStmt title{
+    display: block;
+	background-color: white;
+	margin: 0.5em 0em;
+	width: 51em;
+	-oxy-display-tags:none;
+}
+seriesStmt title:before {
+    content: oxy_combobox(           
+            edit, "@type",
+            editable, false,
+            values, "Abt, Band, Teilband, Teil, Abschnitt") "  "
+			oxy_textfield(
+            edit, "@n",
+            columns, 5) " "; 
+	background-color: #E8E8EB;
+	width: 9em;
+	
+}
+notesStmt note[type='apparatbehandlung']:before{
+	content: "Apparatbehandlung:";
+	width: 12em;
+}
+notesStmt note[type='apparatbehandlung']{
+	margin-top:0.3em;
+	display:block;
+	content: oxy_combobox(           
+            edit, "@subtype",
+            editable, false,
+            values, "getrennt, kombiniert");
+}
+notesStmt note[type='schrifttyp']:before{
+	content: "Schrifttyp:" ;
+	width: 12em;
+}
+notesStmt note[type='schrifttyp']{
+	margin-top:0.3em;
+	display:block;
+	content: oxy_combobox(           
+            edit, "@subtype",
+            editable, false,
+            values, "gotthelfschrift, quellenschrift");
+}
+notesStmt note[type='varianten']:before{
+	display: block;
+	content: "Anmerkung zu den Varianten:" ;
+	background-color: #E8E8EB;
+}
+notesStmt note[type='varianten']{
+	display: block;
+	margin-top:0.3em;
+	background-color: white;
+	-oxy-display-tags: none;
+	width:51em;
+}
+sourceDesc biblStruct:before{
+	content: "Leitfassung:";
+	display:block;
+	background-color: #E8E8EB;
+}
+sourceDesc biblStruct{
+	margin-top:0.3em;
+	display:block;
+	background-color:white;
+}
+sourceDesc listWit:before{
+	content: "Weitere Quellen:";
+}
+sourceDesc listWit{
+	display: block;
+	margin-top:0.8em;
+}
+sourceDesc witness{
+	display:list-item;
+	background-color:white;
+	margin:0.5em 1em;
+}
+revisionDesc change:before{
+	content:
+			oxy_label(text, "Version: ", width, 7em, text-align, right)
+			oxy_textfield(
+            edit, "@n",
+            columns, 5)
+			oxy_label(text, "Datum: ", width, 7em, text-align, right)
+			oxy_datePicker(
+            columns, 16, 
+            edit, "@when",
+            format, "yyyy-MM-dd")
+			oxy_label(text, "Name: ", width, 6em, text-align, right)
+			oxy_textfield(
+            edit, "@who",
+            columns, 40);
+	background-color: #E8E8EB;
+	display:block;
+	font: small;
+	padding-bottom:0.2em;
+}
+revisionDesc change{
+	display:block;
+	margin-top:0.8em;
+	background-color: white;
+	width:51em;
+}
+
+text, group{
+	display: block;
+}
+group text:before{
+	content: "________________________"
+}
+front, body, back {
+	display:block;
+}
+front, back {
+	border: 1px solid black;
+}
+body div:before{
+	content: oxy_textfield(
+            edit, "@n",
+			tooltip, "Nummer",
+            columns, 5)
+			oxy_combobox(           
+            edit, "@type",
+            editable, false,
+            values, "part, chapter, section",
+			labels, "Teil, Kapitel, Abschnitt");
+}
+body div {
+	display: block;
+	margin-top:2em;
+	/* border-top: 2px solid #AB0805; */
+}
+body div>head {
+	color: #AB0805;
+	display: block;
+	margin-top:0.5em;
+	font-weight: bold;
+	font-size:18px;
+	border-bottom: 2px solid #AB0805;
+}
+choice{
+	-oxy-display-tags:none;
+}
+choice>sic:after{
+	content: " [sic] ";
+}
+choice>sic{
+	font-weight: bold;
+	-oxy-display-tags:none;
+}
+choice>corr{
+	color: #AB0805;
+	font-weight: bold;
+	-oxy-display-tags:none;
+}
+choice>corr[type='korrektur']:before{
+	content: "korr. zu ";
+  font-size: 60%;
+  vertical-align: text-top;
+}
+choice>corr[type='emendation']:before{
+	content: "emend. zu ";
+  font-size: 60%;
+  vertical-align: text-top;
+}
+choice>orig{
+	font-weight: bold;
+	-oxy-display-tags:none;
+}
+choice>reg:before{
+	content: " (";
+}
+choice>reg:after{
+	content: ")";
+}
+choice>reg{
+	color: #AB0805;
+	font-weight: bold;
+	-oxy-display-tags:none;
+}
+lg {
+	display:block;
+	margin: 1em 4em;
+}
+l{
+	display: block;
+}
+pb {
+	content: "|";
+	-oxy-display-tags:none;
+	color: #AB0805;
+	font-weight: bold;
+}
+pb:after {
+  content: attr(n) " ";
+  font-size: 60%;
+  vertical-align: text-top;
+}
+p {
+	display: block;
+	margin-top:1em;
+}

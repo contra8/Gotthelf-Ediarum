@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt:extensions xmlns:xt="http://www.oxygenxml.com/ns/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.oxygenxml.com/ns/extension http://www.oxygenxml.com/ns/extension/extensions.xsd">
+    <xt:extension id="ediarum-hkg-gotthelf">
+        <!--xt:location href="http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/ediarum_hkg_gotthelf.zip" /-->
+        <xt:location href="https://raw.githubusercontent.com/contra8/Gotthelf-Ediarum/master/dist/ediarum_hkg_gotthelf.zip" />
+        <xt:version>2019.10.22</xt:version>
+        <xt:oxy_version>17.0+</xt:oxy_version>
+        <xt:type>framework</xt:type>
+        <xt:author>Christian Achter</xt:author>
+        <xt:name>Ediarum für HKG Gotthelf</xt:name>
+        <xt:description xmlns="http://www.w3.org/1999/xhtml">
+            <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
+            <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
+            <p><b>Release Note 22.10.2019</b></p>
+            <ul>
+                <li>CSS-Dateien auf HKG-Server ausgelagert (statt in lokalem Verzeichnis des Oxygen-Clients), um relative Pfade bei den Verlinkungen z. B. in Registern zu ermöglichen.</li>
+                <li>Ortsregister: Neu erstellte Orte erhalten automatisch eine eindeutige ID.</li>
+                <li>Ortsregister: Per Buttonklick erhalten alle Ortseinträge eine eindeutige ID. Bestehende IDs werden dabei nicht überschrieben/ersetzt.</li>
+                <li>Ortsregister: Bearbeitungsstatus eines Ortseintrags kann gesetzt und per Dropdown mutiert werden.</li>
+                <li>Ortsregister: Bei Speichern der Datei Ortsregister.xml wird eine auszugsweise Kopie in /db/apps/ediarum/data_copy abgelegt für das Popup-Fenster mit der Liste aller Orte.</li>
+                <li>Personenregister: Neu erstellte Personen bzw. Institutionen erhalten automatisch eine eindeutige ID.</li>
+                <li>Personenregister: Bei Speichern der Datei Personenregister.xml wird eine auszugsweise Kopie in /db/apps/ediarum/data_copy abgelegt für das Popup-Fenster mit der Liste aller Personen.</li>
+                <li>Personenregister: Bei Speichern der Datei Personenregister.xml wird eine auszugsweise Kopie in /db/apps/ediarum/data_copy abgelegt für das Popup-Fenster mit der Liste aller Institutionen.</li>
+                <li>Personenregister: Per Buttonklick erhalten alle Personen-/Institutionseinträge eine eindeutige ID. Bestehende IDs werden dabei nicht überschrieben/ersetzt.</li>
+                <li>Personenregister: Bearbeitungsstatus eines Personeneintrags kann gesetzt und per Dropdown mutiert werden.</li>
+                <li>Personenregister: Affiliation kann gesetzt werden.</li>
+                <li>Personenregister: Beziehung (&lt;relation&gt;) kann gesetzt werden.</li>
+                <li>Personenregister: &lt;seeAlso&gt; kann hinzugefügt werden. Erzeugt automatisch einen Link auf den referenzierten Eintrag.</li>
+                <li>Personenregister: Editionsregistereintrag kann hinzugefügt werden: Edition, Band und Seitennummer(n).</li>
+                <li>Personenregister: &lt;addname&gt; kann zu &lt;persName&gt; hinzugefügt werden via <i>Textauszeichnungen &#8594; Zusätzlicher Name</i></li>
+                <li>Personenregister: &lt;nameLink&gt; kann zu &lt;persName&gt; hinzugefügt werden via <i>Textauszeichnungen &#8594; nameLink</i>. Markierter Text wird mit &lt;nameLink&gt;-Tag umschlossen, ausgeschnitten und als letztes Unterelement von &lt;persName&gt; wieder eingefügt.</li>
+                <li>Personenregister: Einem Institutionsnamen kann ein Ort (&lt;locKey>) hinzugefügt werden.</li>
+                <li>Personen- und Ortsregister: Editionsregistereinträge können per Oxygen-Menü hinzugefügt und anschliessend direkt im Eintrag mutiert werden.</li>
+                <li>Personen- und Ortsregister: Normdaten können per Oxygen-Menü hinzugefügt und anschliessend direkt im Eintrag per Dropdown mutiert werden.</li>
+                <li>Allgemein: Die Anzeigeschrift in den Bearbeitungsmasken wurde auf DejaVu Sans gesetzt.</li>
+            </ul>
+            <p><b>Release Note 23.09.2019</b></p>
+            <ul>
+                <li>Personenregister: Bearbeitungsstand (Attribut <i>&lt;status></i>) kann hinzugefügt und anschliessend bearbeitet werden.</li>
+                <li>Personenregister: Button zum Erzeugen von "seeAlso" optimiert: Eingefügter Content ist nun der Klarname der referenzierten Person/Körperschaft.</li>
+            </ul>
+            <!--p><b>Release Note 20.9.2019</b></p>
+            <ul>
+                <li>Personenregister: Button zum Erzeugen von "seeAlso" hinzugefügt. Content des neuen seg ist bisher nur die ID des gewählten Personenregistereintrags; gewünscht ist der Klarname.</li>
+            </ul-->
+            <p><b>Release Note 19.09.2019</b></p>
+            <ul>
+                <li>Ausblenden (Auskommentieren) diverser Funktionen, die noch nicht final abgenommen wurden. Siehe folgende Punkte:</li>
+                <li>Ortsregister: Button "Orte sortieren" entfernt (d.h. im Framework-Code auskommentiert)</li>
+                <li>Ortsregister: Button "Fehlende IDs erzeugen" entfernt (d.h. im Framework-Code auskommentiert)</li>
+                <li>Ortsregister: Bei Erzeugen eines neuen Ortseintrags wird nicht automatisch eine ID erzeugt (Anpassung in <i>action</i> mit id <i>new_place</i>).</li>
+            </ul>
+            <p><b>Release Note 16.09.2019</b></p>
+            <ul>
+                <li>Ortsregister: Button "Fehlende IDs erzeugen" hinzugefügt. Ruft XSLT-Skript resource/create_missing_ids.xsl auf.</li>
+                <li>Aufräumarbeit: Auskommentierten Code in Datei resources/sort.xsl entfernt (Gelöschter Code findet sich in Backups bis 11.09.2019).</li>
+                <li>Aufräumarbeit: Datei resources/merge.xsl entfernt (findet sich in Backups bis 11.09.2019).</li>
+                <li>Aufräumarbeit: Datei resources/idGenerationDefaultOptions.xml entfernt (findet sich in Backups bis 11.09.2019).</li>
+            </ul>
+            <p><b>Release Note 13.09.2019</b></p>
+            <ul>
+                <li>Wert von <i>xt:oxy_version</i> in ediarum_hkg_gotthelf_update.xml "gedowngradet" von 20.0+ auf 17.0+, um Ediarum auch in Oxygen XML Author 17.0 installieren zu können (z. B. auf Desktop-Mac Noëmi)</li>
+            </ul>
+            <p><b>Release Note 14.08.2019</b></p>
+            <ul>
+                <li>Umbenennung für vereinfachte Installation in Oxygen der FJG.</li>
+            </ul>
+            <p><b>Release Note 08.08.2019</b></p>
+            <ul>
+                <li>Brief-Framework als eigenes Framework; bei Ediarum-Installation keine händische Kopie und Anpassung des Manuskripte-Frameworks nötig.</li>
+                <li>Ortsregister, "Autor"-Ansicht: Button "Neu" --> "Neuer Ort" erzeugt nach Eingabe des Ortsnamens und Klick auf "OK" automatisch eine Orts-ID nach dem Muster o_xyz_abc_klm.</li>
+                <li>Ortsregister, "Autor"-Ansicht: Neuer Button "Orte sortieren" sortiert alle Orte innerhalb eines Gliederungspunktes alphabetisch sowie alle Gliederungspunkte alphabetisch.</li>
+                <li>Ortsregister, "Autor"-Ansicht: Button "Ort bearbeiten" --> "Normdaten hinzufügen" bietet im Popup Auswahl von Normdaten-Anbietern (aktuell GND, VIAF, histHub).</li>
+                <li>Ortsregister, "Autor"-Ansicht: Button "Ort bearbeiten" --> "Beschreibung hinzufügen" fragt im Popup-Fenster nicht mehr nach "typ1/typ2" und trägt dieses Attribut nicht mehr in XML ein. XML damit Schema-konform.</li>
+                <li>Orts- und Personenregister: Diverse Umbenennungen von Buttons bzw. deren Dropdown-Listen.</li>
+            </ul>
+        </xt:description>
+        <xt:license>
+<![CDATA[
+
+Die digitale Arbeitsumgebung steht ausschließlich fuer den Gebrauch im Rahmen des Projektes HKG Jeremias Gotthelf zur Verfügung.
+
+]]></xt:license>
+    </xt:extension>
+</xt:extensions>

@@ -1,0 +1,3233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized version="16.0" xml:space="preserve">
+	<serializableOrderedMap>
+		<entry>
+			<String>document.types</String>
+			<documentTypeDescriptor-array>
+				<documentTypeDescriptor>
+					<field name="extensionPatch">
+						<null/>
+					</field>
+					<field name="name">
+						<String>HKG Gotthelf - Personenregister</String>
+					</field>
+					<field name="schemaDescriptor">
+						<docTypeSchema>
+							<field name="type">
+								<Integer>4</Integer>
+							</field>
+							<field name="uri">
+								<String>${HKG_SCHEMATA}/Personenregister.rng</String>
+							</field>
+						</docTypeSchema>
+					</field>
+					<field name="classpath">
+						<String-array>
+							<String>${framework}/ediarum.jar</String>
+						</String-array>
+					</field>
+					<field name="parentClassLoaderID">
+						<null/>
+					</field>
+					<field name="authorExtensionDescriptor">
+						<authorExtension>
+							<field name="cssDescriptors">
+								<cssFile-array>
+									<cssFile>
+										<field name="href">
+											<!--String>${framework}/css/hkg_personenregister.css</String-->
+											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String>
+										</field>
+										<field name="title">
+											<String></String>
+										</field>
+										<field name="alternate">
+											<Boolean>false</Boolean>
+										</field>
+									</cssFile>
+								</cssFile-array>
+							</field>
+							<field name="mergeCSSsFromDocument">
+								<Boolean>false</Boolean>
+							</field>
+							<field name="actionDescriptors">
+								<action-array>
+									<action>
+										<field name="id">
+											<String>div</String>
+										</field>
+										<field name="name">
+											<String>Gliederungspunkt</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen neuen Gliederungspunkt (A, B, ...) ein.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@n]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" n="${ask('Gliederungspunkt')}">&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::body</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" n="${ask('Gliederungspunkt')}">&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::text/body</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" n="${ask('Gliederungspunkt')}">&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::text/body</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>descendant-or-self::body</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" n="${ask('Gliederungspunkt')}">&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>descendant-or-self::body</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>new_person</String>
+										</field>
+										<field name="name">
+											<String>Person</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen neuen Personeintrag ein.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::div[@n]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<!--String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}"-->
+																<!--String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName> ${ask('Weiteres')}${caret}&lt;/seg>&lt;/ab></String-->
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname/n')}&lt;/forename>&lt;/persName>${caret}&lt;/seg>&lt;/ab></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<!--String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName> ${ask('Weiteres')}${caret}&lt;/seg>&lt;/ab></String-->
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName>${caret}&lt;/seg>&lt;/ab></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>new_group</String>
+										</field>
+										<field name="name">
+											<String>Gruppe</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neue Gruppe ein.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>first action</String>
+																<String>new_group_structure</String>
+															</entry>
+															<entry>
+																<String>second action</String>
+																<String>new_group_item</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>link</String>
+										</field>
+										<field name="name">
+											<String>Normdaten hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt Normdaten ein.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='links']/list</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" ana="${ask('Bitte Typ angeben', editable_combobox, ('GND':'GND';'VIAF':'VIAF';'histHub':'histHub'), 'GND')}">${ask('Bitte geben Sie die ID ein')}${caret}&lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='links']/list</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='links']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item ana="${ask('Bitte Typ angeben', editable_combobox, ('GND':'GND';'VIAF':'VIAF';'histHub':'histHub'), 'GND')}">${ask('Bitte geben Sie die ID ein')}${caret}&lt;/item>&lt;/list></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='links']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="links">&lt;list>&lt;item ana="${ask('Bitte Typ angeben', editable_combobox, ('GND':'GND';'VIAF':'VIAF';'histHub':'histHub'), 'GND')}">${ask('Bitte geben Sie die ID ein')}${caret}&lt;/item>&lt;/list>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_affiliation</String>
+										</field>
+										<field name="name">
+											<String>Affiliation hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neue Beschreibung bzgl. Funktion/Tätigkeit/Rang ein.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>first action</String>
+																<String>add_affilliation_ask_for_role</String>
+															</entry>
+															<entry>
+																<String>second action</String>
+																<String>add_affilliation_ask_for_organization</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_affilliation_ask_for_role</String>
+										</field>
+										<field name="name">
+											<String>Rolle hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neue Beschreibung zur Funktion/Tätigkeit/Rang ein.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0">&lt;affiliation role="${ask('Rolle')}">${caret}&lt;/affiliation>&lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;affiliation role="${ask('Rolle')}">${caret}&lt;/affiliation>&lt;/item>&lt;/list></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='links']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="affiliations">&lt;list>&lt;item>&lt;affiliation role="${ask('Rolle')}">${caret}&lt;/affiliation>&lt;/item>&lt;/list>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='links']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="affiliations">&lt;list>&lt;item>&lt;affiliation role="${ask('Rolle')}">${caret}&lt;/affiliation>&lt;/item>&lt;/list>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_affilliation_ask_for_organization</String>
+										</field>
+										<field name="name">
+											<String>Affiliation hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neue Beschreibung bzgl. Funktion/Tätigkeit/Rang hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/organisationsregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>hkg:orgKey</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>"#" + @xml:id</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;affiliation role="${ask('Rolle')}">${caret}&lt;/affiliation>&lt;/item>&lt;/list></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='links']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="affiliations">&lt;list>&lt;item>&lt;affiliation role="${ask('Rolle')}">${caret}&lt;/affiliation>&lt;/item>&lt;/list>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='links']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="affiliations">&lt;list>&lt;item>&lt;affiliation role="${ask('Rolle')}">${caret}&lt;/affiliation>&lt;/item>&lt;/list>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_date_to_affiliation</String>
+										</field>
+										<field name="name">
+											<String>Datum zu Affiliation hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neues Datum zu einer Affiliation hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>first action</String>
+																<String>add_when_date_to_affiliation</String>
+															</entry>
+															<entry>
+																<String>second action</String>
+																<String>add_notBefore_date_to_affiliation</String>
+															</entry>
+															<entry>
+																<String>third action</String>
+																<String>add_notAfter_date_to_affiliation</String>
+															</entry>
+															<entry>
+																<String>forth action</String>
+																<String>add_from_date_to_affiliation</String>
+															</entry>
+															<entry>
+																<String>fifth action</String>
+																<String>add_to_date_to_affiliation</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_when_date_to_affiliation</String>
+										</field>
+										<field name="name">
+											<String>Attribut when zu Affiliation hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt ein neues when-Attribut zu einer Affiliation hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>when</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte Zeitraum/Datum für Attribut "when" angeben:')}</String>
+															</entry>
+															<entry>
+																<String>editAttribute</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_notBefore_date_to_affiliation</String>
+										</field>
+										<field name="name">
+											<String>Attribut notBefore zu Affiliation hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt ein neues notBefore-Attribut zu einer Affiliation hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>notBefore</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte Zeitraum/Datum für Attribut "notBefore" angeben:')}</String>
+															</entry>
+															<entry>
+																<String>editAttribute</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_notAfter_date_to_affiliation</String>
+										</field>
+										<field name="name">
+											<String>Attribut notAfter zu Affiliation hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt ein neues notAfter-Attribut zu einer Affiliation hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>notAfter</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte Zeitraum/Datum für Attribut "notAfter" angeben:')}</String>
+															</entry>
+															<entry>
+																<String>editAttribute</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_from_date_to_affiliation</String>
+										</field>
+										<field name="name">
+											<String>Attribut from zu Affiliation hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt ein neues from-Attribut zu einer Affiliation hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>from</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte Zeitraum/Datum für Attribut "from" angeben:')}</String>
+															</entry>
+															<entry>
+																<String>editAttribute</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_to_date_to_affiliation</String>
+										</field>
+										<field name="name">
+											<String>Attribut to zu Affiliation hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt ein neues to-Attribut zu einer Affiliation hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>to</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list/item/affiliation</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte Zeitraum/Datum für Attribut "notBefore" angeben:')}</String>
+															</entry>
+															<entry>
+																<String>editAttribute</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>relations</String>
+										</field>
+										<field name="name">
+											<String>Beziehung hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neue Beschreibung bzgl. Funktion/Tätigkeit/Rang hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>first action</String>
+																<String>relations_ask_for_role</String>
+															</entry>
+															<entry>
+																<String>second action</String>
+																<String>relations_ask_for_person</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>relations_ask_for_role</String>
+										</field>
+										<field name="name">
+											<String>Rolle hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neue Beschreibung bzgl. Funktion/Tätigkeit/Rang hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='relations']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;relation xmlns="http://www.tei-c.org/ns/1.0" hkg:relation="${ask('Rolle')}">${caret}&lt;/relation></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='relations']/listRelation</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg type="relations" xmlns="http://www.tei-c.org/ns/1.0">&lt;listRelation>&lt;relation hkg:relation="${ask('Rolle')}">${caret}&lt;/relation>&lt;/listRelation>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<!--actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='links']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="relations">&lt;list>&lt;item>&lt;note hkg:relation3="${ask('Rolle')}">${caret}&lt;/note>&lt;/item>&lt;/list>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='links']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode-->
+												<!--actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="relations">&lt;list>&lt;item>&lt;note hkg:relation4="${ask('Rolle')}">${caret}&lt;/relations>&lt;/item>&lt;/list>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode-->
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>relations_ask_for_person</String>
+										</field>
+										<field name="name">
+											<String>Beziehung hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neue Beschreibung bzgl. Funktion/Tätigkeit/Rang hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='relations']/listRelation/relation</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>hkg:persKey</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>"#" + @xml:id</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>see</String>
+										</field>
+										<field name="name">
+											<String>"see" hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen neuen Verweis unter "Siehe" ein.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='see']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/note></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='see']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='seeAlso']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg  xmlns="http://www.tei-c.org/ns/1.0" type="see">&lt;note>${caret}&lt;/note>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='seeAlso']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="see">&lt;note>${caret}&lt;/note>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>seeAlso</String>
+										</field>
+										<field name="name">
+											<String>seeAlso hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen Eintrag unter "Siehe auch" hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;seg xmlns='http://www.tei-c.org/ns/1.0' type='seeAlso'>&lt;name xmlns='http://www.tei-c.org/ns/1.0' hkg:persKey='#"+ @xml:id +"'>" + . + "&lt;/name>&lt;/seg>"</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='name']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>insert_editionsregister_hkg</String>
+										</field>
+										<field name="name">
+											<String>Editionsregistereintrag HKG</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen Editionsregistereintrag HKG hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='HKG']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note source="HKG" n="${ask('Bitte Band angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Leerschlag getrennt)')}&lt;/note></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='HKG']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="HKG">&lt;note source="HKG" n="${ask('Bitte Band angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Leerschlag trennen)')}&lt;/note>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>insert_editionsregister_sw_eb</String>
+										</field>
+										<field name="name">
+											<String>Editionsregistereintrag SW/EB</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen Editionsregistereintrag SW/EB hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='SW_EB']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0" source="${ask('Bitte Editionsregister angeben', editable_combobox, ('SW':'SW';'EB':'EB'), '')}" n="${ask('Bitte Band angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Leerschlag trennen)')}&lt;/note></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']/seg[@type='SW_EB']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="SW_EB">&lt;note source="${ask('Bitte Editionsregister angeben', editable_combobox, ('SW':'SW';'EB':'EB'), '')}" n="${ask('Bitte Band angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Leerschlag trennen)')}&lt;/note>&lt;/seg></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='person']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>status</String>
+										</field>
+										<field name="name">
+											<String>Status setzen</String>
+										</field>
+										<field name="description">
+											<String>Ändert den Bearbeitungsstatus.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>hkg:status</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::ab[@type='person']</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte Bearbeitungsstatus angeben', editable_combobox, ('vorkontrolliert':'vorkontrolliert';'kontrolliert':'kontrolliert';'an_GND':'an_GND';'inkl_GND':'inkl_GND'), '')}</String>
+															</entry>
+															<entry>
+																<String>editAttribute</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_locKey_to_orgName</String>
+										</field>
+										<field name="name">
+											<String>Ort zur Institution hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen bestehenden Ort zu einer Institution hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='organization']/seg[@type='name']/orgName</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/ortsregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>hkg:locKey</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>"#" + @xml:id</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>genName</String>
+										</field>
+										<field name="name">
+											<String>Generationsname</String>
+										</field>
+										<field name="description">
+											<String>Einen Zusatz, etwa II., zum Namen hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/genName_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/genName.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or ancestor-or-self::note/parent::item/parent::list or ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;genName  xmlns="http://www.tei-c.org/ns/1.0">&lt;/genName></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>note</String>
+										</field>
+										<field name="name">
+											<String>Kommentar</String>
+										</field>
+										<field name="description">
+											<String>Kommentar zum Namen kennzeichnen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/note_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/note.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0">&lt;/note></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>m_overline</String>
+										</field>
+										<field name="name">
+											<String>M Overline</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String>file:/C:/Users/phbelitz/Documents/gh%20img/m_overline.gif</String>
+										</field>
+										<field name="smallIconPath">
+											<String>file:/C:/Users/phbelitz/Documents/gh%20img/m_overline16.gif</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&amp;#x0305;</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>new_group_item</String>
+										</field>
+										<field name="name">
+											<String>Gruppenmitglied</String>
+										</field>
+										<field name="description">
+											<String>Fügt der Gruppe ein neues Mitglied hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='group']/seg/list</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>file:/C:/Program%20Files%20(x86)/Oxygen%20XML%20Editor%2016/frameworks/ediarum_hkg_gotthelf/bsp_personen_register.xml</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;item xmlns="http://www.tei-c.org/ns/1.0">&lt;name sameAs='#" + @xml:id + "'>" + . + "&lt;/name>&lt;note>${caret}&lt;/note>&lt;/item>"</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>//seg[@type='name']//*</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='group']/seg/list</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//*:ab[@type='person']</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='group']/seg</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>file:/C:/Program%20Files%20(x86)/Oxygen%20XML%20Editor%2016/frameworks/ediarum_hkg_gotthelf/bsp_personen_register.xml</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;name sameAs='#" + @xml:id + "'>" + . + "&lt;/name>&lt;note>${caret}&lt;/note>&lt;/item>&lt;/list>"</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>//seg[@type='name']//*</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='group']/seg</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//*:ab[@type='person']</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>new_group_structure</String>
+										</field>
+										<field name="name">
+											<String>Gruppenstruktur</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::div[@n]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="group" xml:id="g_${id}">&lt;seg>&lt;name>${ask('Gruppenbezeichnung')}${caret}&lt;/name>&lt;/seg>&lt;/ab></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="group" xml:id="g_${id}">&lt;seg>&lt;name>${ask('Gruppenbezeichnung')}${caret}&lt;/name>&lt;/seg>&lt;/ab></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>addName</String>
+										</field>
+										<field name="name">
+											<String>Zusätzlicher Name</String>
+										</field>
+										<field name="description">
+											<String>Einen zusätzlichen Namen hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/addName_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/addName.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or ancestor-or-self::note/parent::item/parent::list or ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="operationID">
+														<!--String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String-->
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;addName xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Bitte Typ angeben', editable_combobox, ('birthName':'birthName';'marriedName':'marriedName'), '')}">${caret}&lt;/addName></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab/seg[@type='name']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>roleName</String>
+										</field>
+										<field name="name">
+											<String>Titel</String>
+										</field>
+										<field name="description">
+											<String>Einen Titel kennzeichnen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/roleName_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/roleName.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or ancestor-or-self::note/parent::item/parent::list or ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;roleName xmlns="http://www.tei-c.org/ns/1.0">&lt;/roleName></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>date</String>
+										</field>
+										<field name="name">
+											<String>Datum</String>
+										</field>
+										<field name="description">
+											<String>Eine Datumsangabe kennzeichnen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/date_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/date.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or ancestor-or-self::note/parent::item/parent::list or ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ExecuteMultipleActionsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>actionIDs</String>
+																<String>date_ask date_iso delete_telotatag</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>delete_telotatag</String>
+										</field>
+										<field name="name">
+											<String>Telotatag löschen</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::telota</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>script</String>
+																<String>&lt;?xml version="1.0" encoding="UTF-8"?>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">&lt;xsl:import href="resources/delete_telotatag.xsl"/>&lt;/xsl:stylesheet> </String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>ancestor-or-self::telota</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>ancestor-or-self::telota</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>date_ask</String>
+										</field>
+										<field name="name">
+											<String>Datumsformat</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or
+ancestor-or-self::note/parent::item/parent::list or
+ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;telota xmlns="http://www.tei-c.org/ns/1.0" element="date" type="${ask('Bitte zwischen Zeitpunkt und Zeitspanne wählen', combobox, ('when':'Zeitpunkt'; 'from_to':'Zeitspanne: von-bis'; 'from':'Zeitspanne: von'; 'to':'Zeitspanne: bis'), 'from_to')}">&lt;/telota></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>date_iso</String>
+										</field>
+										<field name="name">
+											<String>Datum einfügen</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::telota[@element='date' and @type='when']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;date xmlns="http://www.tei-c.org/ns/1.0" when="${ask('Bitte Zeitpunkt als ISO-Datum eingeben')}">&lt;/date></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::telota[@element='date' and @type='from']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;date xmlns="http://www.tei-c.org/ns/1.0" from="${ask('Bitte Startzeitpunkt als ISO-Datum eingeben')}">&lt;/date></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::telota[@element='date' and @type='to']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;date xmlns="http://www.tei-c.org/ns/1.0" to="${ask('Bitte Endzeitpunkt als ISO-Datum eingeben')}">&lt;/date></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::telota[@element='date' and @type='from_to']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;date xmlns="http://www.tei-c.org/ns/1.0" from="${ask('Bitte Startzeitpunkt als ISO-Datum eingeben')}" to="${ask('Bitte Endzeitpunkt als ISO-Datum eingeben')}">&lt;/date></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;date xmlns="http://www.tei-c.org/ns/1.0">&lt;/date></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>placeName</String>
+										</field>
+										<field name="name">
+											<String>Ort</String>
+										</field>
+										<field name="description">
+											<String>Einen Ort kennzeichnen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/placeName_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/placeName.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or
+ancestor-or-self::note/parent::item/parent::list or
+ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;placeName xmlns="http://www.tei-c.org/ns/1.0">&lt;/placeName></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>orgName</String>
+										</field>
+										<field name="name">
+											<String>Organisation</String>
+										</field>
+										<field name="description">
+											<String>Eine Organisation kennzeichnen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/orgName_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/orgName.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or
+ancestor-or-self::note/parent::item/parent::list or
+ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;orgName xmlns="http://www.tei-c.org/ns/1.0">&lt;/orgName></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>name</String>
+										</field>
+										<field name="name">
+											<String>Name</String>
+										</field>
+										<field name="description">
+											<String>Einen Namen kennzeichnen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/name_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/name.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or
+ancestor-or-self::note/parent::item/parent::list or
+ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;name xmlns="http://www.tei-c.org/ns/1.0">&lt;/name></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>nameLink</String>
+										</field>
+										<field name="name">
+											<String>nameLink</String>
+										</field>
+										<field name="description">
+											<String>Einen nameLink kennzeichnen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/name_20x20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/name.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::seg[@type='name'] or
+															ancestor-or-self::note/parent::item/parent::list or
+															ancestor-or-self::note/parent::seg</String>
+													</field>
+													<field name="operationID">
+														<!--String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String-->
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;nameLink xmlns='http://www.tei-c.org/ns/1.0'>${selection}&lt;/nameLink></String>
+																<!--String>"&lt;seg xmlns='http://www.tei-c.org/ns/1.0' type='seeAlso'>&lt;name xmlns='http://www.tei-c.org/ns/1.0' hkg:persKey='#"+ @xml:id +"'>" + . + "&lt;/name>&lt;/seg>"</String-->
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::persName</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>sameAs</String>
+										</field>
+										<field name="name">
+											<String>Registerlink</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::placeName</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/ortsregister.xml</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>sameAs</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>"#" + @xml:id</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::name</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>sameAs</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>"#" + @xml:id</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>create_missing_person_ids</String>
+										</field>
+										<field name="name">
+											<String>Fehlende IDs erzeugen</String>
+										</field>
+										<field name="description">
+											<String>Erzeugt IDs für Personen, die noch keine ID haben</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>script</String>
+																<String>&lt;?xml version="1.0" encoding="UTF-8"?>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">&lt;xsl:import href="resources/create_missing_person_ids.xsl"/>&lt;/xsl:stylesheet></String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>//body</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>//body</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
+								</action-array>
+							</field>
+							<field name="menubarDescriptor">
+								<menu>
+									<field name="label">
+										<String>Menü</String>
+									</field>
+									<field name="accessKey">
+										<null/>
+									</field>
+									<field name="iconPath">
+										<null/>
+									</field>
+									<field name="menuEntriesDescriptorList">
+										<menuEntry-array/>
+									</field>
+								</menu>
+							</field>
+							<field name="popupMenuDescriptor">
+								<menu>
+									<field name="label">
+										<String>Kontextmenü</String>
+									</field>
+									<field name="accessKey">
+										<null/>
+									</field>
+									<field name="iconPath">
+										<null/>
+									</field>
+									<field name="menuEntriesDescriptorList">
+										<menuEntry-array/>
+									</field>
+								</menu>
+							</field>
+							<field name="toolbarDescriptor">
+								<toolbar>
+									<field name="id">
+										<String>Symbolleiste</String>
+									</field>
+									<field name="type">
+										<Integer>2</Integer>
+									</field>
+									<field name="largeIconPath">
+										<null/>
+									</field>
+									<field name="smallIconPath">
+										<null/>
+									</field>
+									<field name="toolbarEntriesDescriptorList">
+										<toolbarEntry-array>
+											<toolbar>
+												<field name="id">
+													<String>Neu</String>
+												</field>
+												<field name="type">
+													<Integer>3</Integer>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="toolbarEntriesDescriptorList">
+													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>new_person</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>new_group</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div</String>
+															</field>
+														</toolbarItem>
+													</toolbarEntry-array>
+												</field>
+											</toolbar>
+											<toolbarSeparator/>
+											<toolbar>
+												<field name="id">
+													<String>Gruppe bearbeiten</String>
+												</field>
+												<field name="type">
+													<Integer>3</Integer>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="toolbarEntriesDescriptorList">
+													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>new_group_item</String>
+															</field>
+														</toolbarItem>
+													</toolbarEntry-array>
+												</field>
+											</toolbar>
+											<toolbarSeparator/>
+											<toolbar>
+												<field name="id">
+													<String>Person bearbeiten</String>
+												</field>
+												<field name="type">
+													<Integer>3</Integer>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="toolbarEntriesDescriptorList">
+													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>link</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>add_affiliation</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>add_date_to_affiliation</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>relations</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>see</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>seeAlso</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>insert_editionsregister_hkg</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>insert_editionsregister_sw_eb</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>status</String>
+															</field>
+														</toolbarItem>
+													</toolbarEntry-array>
+												</field>
+											</toolbar>
+											<toolbarSeparator/>
+											<toolbar>
+												<field name="id">
+													<String>Institution bearbeiten</String>
+												</field>
+												<field name="type">
+													<Integer>3</Integer>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="toolbarEntriesDescriptorList">
+													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>add_locKey_to_orgName</String>
+															</field>
+														</toolbarItem>
+													</toolbarEntry-array>
+												</field>
+											</toolbar>
+											<toolbarSeparator/>
+											<toolbar>
+												<field name="id">
+													<String>Textauszeichnungen</String>
+												</field>
+												<field name="type">
+													<Integer>3</Integer>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="toolbarEntriesDescriptorList">
+													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>note</String>
+															</field>
+														</toolbarItem>
+														<toolbarSeparator/>
+														<toolbarItem>
+															<field name="actionID">
+																<String>genName</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>addName</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>roleName</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>date</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>placeName</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>orgName</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>name</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>nameLink</String>
+															</field>
+														</toolbarItem>
+													</toolbarEntry-array>
+												</field>
+											</toolbar>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>note</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>genName</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>addName</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>roleName</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>date</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>placeName</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>orgName</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>name</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>nameLink</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>sameAs</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>create_missing_person_ids</String>
+												</field>
+											</toolbarItem>
+										</toolbarEntry-array>
+									</field>
+								</toolbar>
+							</field>
+							<field name="additionalToolbarsDescriptors">
+								<null/>
+							</field>
+							<field name="contextualItems">
+								<contextProvider>
+									<field name="items">
+										<contextItem-array/>
+									</field>
+									<field name="removeItems">
+										<null/>
+									</field>
+								</contextProvider>
+							</field>
+							<field name="tableSupportClassName">
+								<null/>
+							</field>
+							<field name="tableColWidthSupportClassName">
+								<null/>
+							</field>
+							<field name="customReferencesResolver">
+								<null/>
+							</field>
+							<field name="authorExtensionStateListener">
+								<null/>
+							</field>
+							<field name="attributesRecognizer">
+								<null/>
+							</field>
+						</authorExtension>
+					</field>
+					<field name="templatesLocations">
+						<String-array/>
+					</field>
+					<field name="xmlCatalogs">
+						<String-array/>
+					</field>
+					<field name="description">
+						<String>Framework für die Personenegister</String>
+					</field>
+					<field name="doctypeRules">
+						<documentTypeRule-array>
+							<documentTypeRule>
+								<field name="namespace">
+									<String>*</String>
+								</field>
+								<field name="rootElem">
+									<String>*</String>
+								</field>
+								<field name="fileName">
+									<String>*</String>
+								</field>
+								<field name="publicID">
+									<String>*</String>
+								</field>
+								<field name="javaRuleClass">
+									<String></String>
+								</field>
+								<field name="attributeLocalName">
+									<String>doctype</String>
+								</field>
+								<field name="attributeNamespace">
+									<String>http://www.telota.de</String>
+								</field>
+								<field name="attributeValue">
+									<String>personenregister</String>
+								</field>
+							</documentTypeRule>
+						</documentTypeRule-array>
+					</field>
+					<field name="scenarios">
+						<scenario-array/>
+					</field>
+					<field name="validationScenarios">
+						<validationScenario-array/>
+					</field>
+					<field name="defaultValidationScenarios">
+						<null/>
+					</field>
+					<field name="defaultTransformationScenarios">
+						<null/>
+					</field>
+					<field name="extensionsBundleClassName">
+						<null/>
+					</field>
+					<field name="useImposedInitialPage">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="imposedInitialPage">
+						<String>Text</String>
+					</field>
+					<field name="elementLocatorExtension">
+						<null/>
+					</field>
+					<field name="schemaManagerFilterExtension">
+						<null/>
+					</field>
+					<field name="authorSWTDndExtension">
+						<null/>
+					</field>
+					<field name="textSWTDndExtension">
+						<null/>
+					</field>
+					<field name="authorSwingDndExtension">
+						<null/>
+					</field>
+					<field name="cssStylesFilterExtension">
+						<null/>
+					</field>
+					<field name="attributesValueEditor">
+						<null/>
+					</field>
+					<field name="priority">
+						<Integer>3</Integer>
+					</field>
+					<field name="xmlNodeCustomizerExtension">
+						<null/>
+					</field>
+					<field name="externalObjectInsertionHandler">
+						<null/>
+					</field>
+					<field name="customAttributeValueEditor">
+						<null/>
+					</field>
+				</documentTypeDescriptor>
+			</documentTypeDescriptor-array>
+		</entry>
+	</serializableOrderedMap>
+</serialized>

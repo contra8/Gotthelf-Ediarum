@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="20.1">
+    <meta>
+        <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options>
+            <serialized version="20.1" xml:space="preserve">
+                <serializableOrderedMap>
+                    <entry>
+                        <String>additional.frameworks.directories</String>
+                        <String-array>
+                            <String>${pd}/../</String>
+                        </String-array>
+                    </entry>
+                    <entry>
+                        <String>document.types</String>
+                        <documentTypeDescriptor-array/>
+                    </entry>
+                    <entry>
+                        <String>document.types.order</String>
+                        <documentTypeEntry-array>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>4/ediarum_hkg_gotthelf/hkg_drucktexte.framework/HKG Gotthelf - Drucktexte</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>4/ediarum_hkg_gotthelf/hkg_manuskripte.framework/HKG Gotthelf - Manuskripte</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>4/ediarum_hkg_gotthelf/hkg_personenregister.framework/HKG Gotthelf - Personenregister</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>4/ediarum_hkg_gotthelf/hkg_register_copy.framework/HKG Gotthelf - Register_Copy</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>4/ediarum_hkg_gotthelf/hkg_schemadokumentation.framework/HKG Gotthelf - Schemadokumentation</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>4/ediarum_hkg_gotthelf/hkg_werkregister.framework/HKG Gotthelf - Werkregister</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                        </documentTypeEntry-array>
+                    </entry>
+                    <entry>
+                        <String>extensions.update.sites</String>
+                        <String-array>
+                            <String>http://telotadev.bbaw.de/oxygen/gotthelf/update.xml</String>
+                        </String-array>
+                    </entry>
+                    <entry>
+                        <String>key.editor.document.type.association.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>key.editor.document.type.custom.locations.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>key.extensions.update.site.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                </serializableOrderedMap>
+            </serialized>
+        </options>
+    </meta>
+    <projectTree name="gotthelf_dev.xpr"/>
+</project>
