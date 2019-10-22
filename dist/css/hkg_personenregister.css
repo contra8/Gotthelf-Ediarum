@@ -231,8 +231,8 @@ affiliation:before {
 }
 
 affiliation:after {
-    content: " " oxy_url("gfx/link_register.png");
-    link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr("hkg:orgKey");
+	content: " " oxy_url("gfx/link_register.png");
+	link: attr("hkg:orgKey");
     /* link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr("hkg:orgKey"); */
 }
 
@@ -389,7 +389,8 @@ seg[type='seeAlso'] > name {
 
 seg[type='seeAlso'] > name:after {
 	/* link: "USERNAME:PASSWORD@SERVER ...#" attr(key); */
-    link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr("key");
+    /* link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr("key"); */
+	link: attr(key);
 	content: " " url(gfx/link.png);
 }
    
@@ -487,7 +488,8 @@ placeName {
 placeName[sameAs]:after {
     content: " " oxy_url("gfx/link_register.png");
 	/* link: "USERNAME:PASSWORD@SERVER ...#" attr(key); */
-	link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr(sameAs);
+	/* link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr(sameAs); */
+	link: attr(sameAs);
 }
 
 orgName {
@@ -505,7 +507,8 @@ name {
 name[sameAs]:after {
     content: " " oxy_url("gfx/link_register.png");
 	/* link: "USERNAME:PASSWORD@SERVER ...#" attr(key); */
-	link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr(sameAs);
+	/* link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr(sameAs); */
+	link: attr(sameAs);
 }
 
 

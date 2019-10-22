@@ -16,6 +16,7 @@
             <p><b>Release Note 22.10.2019</b></p>
             <ul>
                 <li>CSS-Dateien auf HKG-Server ausgelagert (statt in lokalem Verzeichnis des Oxygen-Clients), um relative Pfade bei den Verlinkungen z. B. in Registern zu ermöglichen.</li>
+                <li>CSS Personenregister: Bei Pseudoelementen wie :after erhält das Attribut <i>link</i> nur noch Key oder ID des verlinkten Elements als Wert, sofern das verlinkte Element ebenfalls Bestandteil des Personenregisters ist. So wird verhindert, dass sich die Datei Personenregister.xml ein zweites Mal im Oxygen XML Author öffnet.</i>.
                 <li>Ortsregister: Neu erstellte Orte erhalten automatisch eine eindeutige ID.</li>
                 <li>Ortsregister: Per Buttonklick erhalten alle Ortseinträge eine eindeutige ID. Bestehende IDs werden dabei nicht überschrieben/ersetzt.</li>
                 <li>Ortsregister: Bearbeitungsstatus eines Ortseintrags kann gesetzt und per Dropdown mutiert werden.</li>
