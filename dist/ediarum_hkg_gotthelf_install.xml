@@ -5,7 +5,7 @@
     <xt:extension id="ediarum-hkg-gotthelf">
         <!--xt:location href="http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/ediarum_hkg_gotthelf.zip" /-->
         <xt:location href="https://raw.githubusercontent.com/contra8/Gotthelf-Ediarum/master/dist/ediarum_hkg_gotthelf.zip" />
-        <xt:version>2019.10.22</xt:version>
+        <xt:version>2019.10.29</xt:version>
         <xt:oxy_version>17.0+</xt:oxy_version>
         <xt:type>framework</xt:type>
         <xt:author>Christian Achter</xt:author>
@@ -13,10 +13,10 @@
         <xt:description xmlns="http://www.w3.org/1999/xhtml">
             <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
-            <p><b>Release Note 22.10.2019</b></p>
+            <p><b>Release Note 29.10.2019</b></p>
             <ul>
                 <li>CSS-Dateien auf HKG-Server ausgelagert (statt in lokalem Verzeichnis des Oxygen-Clients), um relative Pfade bei den Verlinkungen z. B. in Registern zu ermöglichen.</li>
-                <li>CSS Personenregister: Bei Pseudoelementen wie :after erhält das Attribut <i>link</i> nur noch Key oder ID des verlinkten Elements als Wert, sofern das verlinkte Element ebenfalls Bestandteil des Personenregisters ist. So wird verhindert, dass sich die Datei Personenregister.xml ein zweites Mal im Oxygen XML Author öffnet.</i>.
+                <li>CSS Personenregister: Bei Pseudoelementen wie :after erhält das Attribut <i>link</i> nur noch Key oder ID des verlinkten Elements als Wert, sofern das verlinkte Element ebenfalls Bestandteil des Personenregisters ist. So wird verhindert, dass sich die Datei Personenregister.xml ein zweites Mal im Oxygen XML Author öffnet.</li>.
                 <li>Ortsregister: Neu erstellte Orte erhalten automatisch eine eindeutige ID.</li>
                 <li>Ortsregister: Per Buttonklick erhalten alle Ortseinträge eine eindeutige ID. Bestehende IDs werden dabei nicht überschrieben/ersetzt.</li>
                 <li>Ortsregister: Bearbeitungsstatus eines Ortseintrags kann gesetzt und per Dropdown mutiert werden.</li>
@@ -33,9 +33,10 @@
                 <li>Personenregister: &lt;addname&gt; kann zu &lt;persName&gt; hinzugefügt werden via <i>Textauszeichnungen &#8594; Zusätzlicher Name</i></li>
                 <li>Personenregister: &lt;nameLink&gt; kann zu &lt;persName&gt; hinzugefügt werden via <i>Textauszeichnungen &#8594; nameLink</i>. Markierter Text wird mit &lt;nameLink&gt;-Tag umschlossen, ausgeschnitten und als letztes Unterelement von &lt;persName&gt; wieder eingefügt.</li>
                 <li>Personenregister: Einem Institutionsnamen kann ein Ort (&lt;locKey>) hinzugefügt werden.</li>
+                <li>Personenregister: Gruppen können hinzugefügt werden. (Bisher Java-Exception, weil im Framework-Code nur lokale Pfade definiert waren.)</li>
                 <li>Personen- und Ortsregister: Editionsregistereinträge können per Oxygen-Menü hinzugefügt und anschliessend direkt im Eintrag mutiert werden.</li>
                 <li>Personen- und Ortsregister: Normdaten können per Oxygen-Menü hinzugefügt und anschliessend direkt im Eintrag per Dropdown mutiert werden.</li>
-                <li>Allgemein: Die Anzeigeschrift in den Bearbeitungsmasken wurde auf DejaVu Sans gesetzt.</li>
+                <li>Allgemein: Die Anzeigeschrift in den Bearbeitungsmasken wurde auf DejaVu Sans gesetzt. Wer diese Schrift nicht installiert hat, sieht Comic Sans.</li>
             </ul>
             <p><b>Release Note 23.09.2019</b></p>
             <ul>

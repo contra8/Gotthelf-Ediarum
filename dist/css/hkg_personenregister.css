@@ -225,15 +225,27 @@ seg[type='affiliations'] > list > item > affiliation {
 	-oxy-display-tags:none;
 }
 
+/*
 affiliation:before {
 	font-size: 12px;
     content: "[" attr(role) "] ";
 }
+*/
 
 affiliation:after {
-	content: " " oxy_url("gfx/link_register.png");
-	link: attr("hkg:orgKey");
-    /* link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr("hkg:orgKey"); */
+	content: 
+		" role: " oxy_textfield(
+			edit, "@role")
+		" Organisations-ID: " oxy_textfield(
+			edit, "@hkg:orgKey")
+		"Organisationsname: " oxy_xpath(
+			oxy_concat("/TEI/text/body/div/ab[@xml:id='", oxy_substring(attr(hkg|orgKey), 1), "']/seg[@type='name']/orgName/text()")
+			/* "/TEI/text/body/div/ab[@xml:id='n_123_456']/seg[@type='name']/orgName/text()" */
+			/* "count(tokenize(normalize-space(string-join(text(), '')), ' '))" */
+		)
+		" " oxy_url("gfx/link_register.png");
+		link: attr(hkg|orgKey);
+	    /* link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr("hkg:orgKey"); */
 }
 
 affiliation {
@@ -469,6 +481,12 @@ addName {
 	background-color: #BBFFBB;
 	-oxy-display-tags:inherit;
 }
+
+/*
+roleName:before {
+	content: " ";
+}
+*/
 
 roleName {
 	background-color: #FFDDFF;
