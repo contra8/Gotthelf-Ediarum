@@ -35,8 +35,8 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/hkg_personenregister.css</String>
-											<!--String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String-->
+											<!--String>${framework}/css/hkg_personenregister.css</String-->
+											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String>
 										</field>
 										<field name="title">
 											<String></String>
