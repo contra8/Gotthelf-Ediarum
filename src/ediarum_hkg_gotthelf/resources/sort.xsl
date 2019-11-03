@@ -10,7 +10,7 @@
     <xsl:template match="tei:body">
         <xsl:copy>
             <xsl:apply-templates select="tei:div">
-                <xsl:sort select="@n" />
+                <xsl:sort select="@n" lang="de-CH" />
             </xsl:apply-templates>
         </xsl:copy>
     </xsl:template>
@@ -18,7 +18,7 @@
     <xsl:template match="tei:div">
         <xsl:copy>
             <xsl:apply-templates select="@*|tei:ab">
-                <xsl:sort select="tei:seg/tei:settlement" />
+                <xsl:sort select="tei:seg/tei:settlement" lang="de-CH" />
             </xsl:apply-templates>
         </xsl:copy>
     </xsl:template>

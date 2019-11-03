@@ -98,9 +98,9 @@ ab:before {
 		values, "vorkontrolliert, kontrolliert, an_GND, inkl_GND",
 		labels, "vorkontrolliert, kontrolliert, an GND, inkl. GND") "                        ID: " attr("xml:id");
 	background-color: #E8E8EB;
-	text-align: right;
 	width: 100%;
 	font-size: small;
+	text-align: right;
 }
 
 /*
@@ -232,29 +232,45 @@ affiliation:before {
 }
 */
 
+affiliation:before {
+	content: 
+		"@role: " oxy_textfield(
+			edit, "@role")
+		"\A@hkg:orgKey: " oxy_textfield(
+			edit, "@hkg:orgKey");
+		/*link: attr(hkg|orgKey);*/
+		display: block;
+		background-color: #E8E8EB;
+		margin-bottom: 5px;
+		font-size: small;
+		font-weight: normal;
+		line-height: 2.5em;
+}
+
 affiliation:after {
 	content: 
-		" role: " oxy_textfield(
-			edit, "@role")
-		" Organisations-ID: " oxy_textfield(
-			edit, "@hkg:orgKey")
-		"Organisationsname: " oxy_xpath(
+		oxy_xpath(
 			oxy_concat("/TEI/text/body/div/ab[@xml:id='", oxy_substring(attr(hkg|orgKey), 1), "']/seg[@type='name']/orgName/text()")
-			/* "/TEI/text/body/div/ab[@xml:id='n_123_456']/seg[@type='name']/orgName/text()" */
-			/* "count(tokenize(normalize-space(string-join(text(), '')), ' '))" */
 		)
-		" " oxy_url("gfx/link_register.png");
+		" " oxy_url("gfx/link_register.png")
+		;
 		link: attr(hkg|orgKey);
-	    /* link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr("hkg:orgKey"); */
+		display: block;
+		background-color: #E8E8EB;
+		margin-top: 5px;
+		font-size: small;
+		font-weight: normal;
+		line-height: 2.5em;
 }
 
 affiliation {
     display:block;
 	background-color: white;
 	font-size: 16px;
-	margin-bottom: 1em;
-	padding:0.2em;
-	width: 600px;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	padding: 0.4em;
+	width: 100%;
 	-oxy-display-tags:none;
 	-oxy-placeholder-content: "Hier bitte Funktion eingeben";
 }
@@ -273,11 +289,8 @@ seg[type='SW_EB']:before {
     font-weight:bold;
 }
 
-seg[type='HKG'] {
-    display:block;
-}
-
-seg[type='SW_EB'] {
+seg[type='HKG'], seg[type='SW_EB'] {
+	background-color: #E8E8EB;
     display:block;
 }
 
@@ -287,11 +300,15 @@ seg[type='HKG'] > note:before {
 		oxy_combobox(           
 			edit, "@n",
 			editable, true,
-			values, "A.2, A.6, D.1, D.2, D.3, E.1, F.1, F.2, F.3",
-			labels, "A.2, A.6, D.1, D.2, D.3, E.1, F.1, F.2, F.3")
-		" Seite(n) ";
+			width, 80px,
+			values, "A.6.2, D.3, F.1.2, F.1.3",
+			labels, "A.6.2, D.3, F.1.2, F.1.3")
+		"\ASeite(n):";
     /*content: attr("source") " " attr("n") ", Seite(n) ";	*/
-	padding-left: 1em;
+	width: 100%;
+    display: block;
+	padding-left: 0em;
+	line-height: 2em;
 	background-color: #E8E8EB;
 }
 
@@ -304,17 +321,22 @@ seg[type='SW_EB'] > note:before {
             labels, "SW, EB")
         oxy_textfield(           
             edit, "@n")
-        " Seite(n) ";
-    /*content: attr("source") " " attr("n") ", Seite(n) ";	*/
-    padding-left: 1em;
+		"\ASeite(n):";
+	/*content: attr("source") " " attr("n") ", Seite(n) ";	*/
+	width: 100%;
+	display: block;
+	padding-left: 0em;
+	line-height: 2em;
 	background-color: #E8E8EB;
 }
 
 seg[type='HKG'] > note, seg[type='SW_EB'] > note {
-    display:block;
+	display: block;
+	width: 100%;
+	line-height: 2em;
 	margin: 0.5em;
+	margin-bottom: 2em;
 	background-color: #FFFFFF;
-	width: 51em;
 }
 
 /* ***** Beziehungen ***** */
@@ -402,7 +424,7 @@ seg[type='seeAlso'] > name {
 seg[type='seeAlso'] > name:after {
 	/* link: "USERNAME:PASSWORD@SERVER ...#" attr(key); */
     /* link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml" attr("key"); */
-	link: attr(key);
+	link: attr(hkg|persKey);
 	content: " " url(gfx/link.png);
 }
    

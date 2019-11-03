@@ -88,7 +88,6 @@ body > div:before {
 }
 
 ab:before {
-    /*content: "Bearbeitungsstatus: " attr("hkg:status") "                        ID: " attr("xml:id");	*/
 	content: "Bearbeitungsstatus: " oxy_combobox(           
 		edit, "@hkg:status",
 		editable, true,

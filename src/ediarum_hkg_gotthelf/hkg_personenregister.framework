@@ -35,8 +35,8 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<!--String>${framework}/css/hkg_personenregister.css</String-->
-											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String>
+											<String>${framework}/css/hkg_personenregister.css</String>
+											<!--String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String-->
 										</field>
 										<field name="title">
 											<String></String>
@@ -293,6 +293,188 @@
 															<entry>
 																<String>second action</String>
 																<String>new_group_item</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>new_group_structure</String>
+										</field>
+										<field name="name">
+											<String>Gruppenstruktur</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::div[@n]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="group" xml:id="g_${id}">&lt;seg type="name">&lt;name>${ask('Gruppenbezeichnung')}${caret}&lt;/name>&lt;/seg>&lt;/ab></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="group" xml:id="g_${id}">&lt;seg type="name">&lt;name>${ask('Gruppenbezeichnung')}${caret}&lt;/name>&lt;/seg>&lt;/ab></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>new_group_item</String>
+										</field>
+										<field name="name">
+											<String>Neues Gruppenmitglied</String>
+										</field>
+										<field name="description">
+											<String>Fügt der Gruppe ein neues Mitglied hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='group']/seg/list</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<!--String>file:/C:/Program%20Files%20(x86)/Oxygen%20XML%20Editor%2016/frameworks/ediarum_hkg_gotthelf/bsp_personen_register.xml</String-->
+																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<!--String>//*:ab[@type='person']</String-->
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<!--String>//seg[@type='name']//*</String-->
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<!--String>"&lt;item xmlns="http://www.tei-c.org/ns/1.0">&lt;name sameAs='#" + @xml:id + "'>" + . + "&lt;/name>&lt;note>${caret}&lt;/note>&lt;/item>"</String-->
+																<String>"&lt;item xmlns="http://www.tei-c.org/ns/1.0">&lt;name hkg:persKey='#" + @xml:id + "'>" + . + "&lt;/name>&lt;/item>"</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='group']/seg/list</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='group']/seg</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<!--String>file:/C:/Program%20Files%20(x86)/Oxygen%20XML%20Editor%2016/frameworks/ediarum_hkg_gotthelf/bsp_personen_register.xml</String-->
+																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<!--String>//*:ab[@type='person']</String-->
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<!--String>//seg[@type='name']//*</String-->
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<!--String>"&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;name sameAs='#" + @xml:id + "'>" + . + "&lt;/name>&lt;note>${caret}&lt;/note>&lt;/item>&lt;/list>"</String-->
+																<String>"&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;name hkg:persKey='#" + @xml:id + "'>" + . + "&lt;/name>&lt;/item>&lt;/list>"</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab[@type='group']/seg</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -1884,180 +2066,6 @@
 															<entry>
 																<String>fragment</String>
 																<String>&amp;#x0305;</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-									</action>
-									<action>
-										<field name="id">
-											<String>new_group_item</String>
-										</field>
-										<field name="name">
-											<String>Gruppenmitglied</String>
-										</field>
-										<field name="description">
-											<String>Fügt der Gruppe ein neues Mitglied hinzu.</String>
-										</field>
-										<field name="largeIconPath">
-											<String></String>
-										</field>
-										<field name="smallIconPath">
-											<String></String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor-or-self::ab[@type='group']/seg/list</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>URL</String>
-																<String>file:/C:/Program%20Files%20(x86)/Oxygen%20XML%20Editor%2016/frameworks/ediarum_hkg_gotthelf/bsp_personen_register.xml</String>
-															</entry>
-															<entry>
-																<String>element</String>
-																<String>"&lt;item xmlns="http://www.tei-c.org/ns/1.0">&lt;name sameAs='#" + @xml:id + "'>" + . + "&lt;/name>&lt;note>${caret}&lt;/note>&lt;/item>"</String>
-															</entry>
-															<entry>
-																<String>expression</String>
-																<String>//seg[@type='name']//*</String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::ab[@type='group']/seg/list</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>Inside as last child</String>
-															</entry>
-															<entry>
-																<String>node</String>
-																<String>//*:ab[@type='person']</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor-or-self::ab[@type='group']/seg</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>URL</String>
-																<String>file:/C:/Program%20Files%20(x86)/Oxygen%20XML%20Editor%2016/frameworks/ediarum_hkg_gotthelf/bsp_personen_register.xml</String>
-															</entry>
-															<entry>
-																<String>element</String>
-																<String>"&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;name sameAs='#" + @xml:id + "'>" + . + "&lt;/name>&lt;note>${caret}&lt;/note>&lt;/item>&lt;/list>"</String>
-															</entry>
-															<entry>
-																<String>expression</String>
-																<String>//seg[@type='name']//*</String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::ab[@type='group']/seg</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>Inside as last child</String>
-															</entry>
-															<entry>
-																<String>node</String>
-																<String>//*:ab[@type='person']</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-									</action>
-									<action>
-										<field name="id">
-											<String>new_group_structure</String>
-										</field>
-										<field name="name">
-											<String>Gruppenstruktur</String>
-										</field>
-										<field name="description">
-											<String></String>
-										</field>
-										<field name="largeIconPath">
-											<String></String>
-										</field>
-										<field name="smallIconPath">
-											<String></String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>self::div[@n]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="group" xml:id="g_${id}">&lt;seg>&lt;name>${ask('Gruppenbezeichnung')}${caret}&lt;/name>&lt;/seg>&lt;/ab></String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String></String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>Inside as last child</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor-or-self::ab</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="group" xml:id="g_${id}">&lt;seg>&lt;name>${ask('Gruppenbezeichnung')}${caret}&lt;/name>&lt;/seg>&lt;/ab></String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::ab</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>After</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
