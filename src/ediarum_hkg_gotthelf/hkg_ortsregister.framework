@@ -1006,7 +1006,7 @@ not(ancestor-or-self::ab/seg[@type='placeName']/region)</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
-																<String>&lt;?xml version="1.0" encoding="UTF-8"?>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">&lt;xsl:import href="resources/create_missing_place_ids.xsl"/>&lt;/xsl:stylesheet></String>
+																<String>&lt;?xml version="1.0" encoding="UTF-8"?>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">&lt;xsl:import href="resources/create_missing_ids_in_ortsregister.xsl"/>&lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
 																<String>sourceLocation</String>

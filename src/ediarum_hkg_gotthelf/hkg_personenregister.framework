@@ -2772,7 +2772,7 @@ ancestor-or-self::note/parent::seg</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
-																<String>&lt;?xml version="1.0" encoding="UTF-8"?>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">&lt;xsl:import href="resources/create_missing_person_ids.xsl"/>&lt;/xsl:stylesheet></String>
+																<String>&lt;?xml version="1.0" encoding="UTF-8"?>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">&lt;xsl:import href="resources/create_missing_ids_in_personenregister.xsl"/>&lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
 																<String>sourceLocation</String>
