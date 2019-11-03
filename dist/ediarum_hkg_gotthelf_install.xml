@@ -16,7 +16,7 @@
             <p><b>Release Note 03.11.2019</b></p>
             <ul>
                 <li>CSS-Dateien auf HKG-Server ausgelagert (statt in lokalem Verzeichnis des Oxygen-Clients), um relative Pfade bei den Verlinkungen z. B. in Registern zu ermöglichen.</li>
-                <li>CSS Personenregister: Bei Pseudoelementen wie :after erhält das Attribut <i>link</i> nur noch Key oder ID des verlinkten Elements als Wert, sofern das verlinkte Element ebenfalls Bestandteil des Personenregisters ist. So wird verhindert, dass sich die Datei Personenregister.xml ein zweites Mal im Oxygen XML Author öffnet.</li>.
+                <li>CSS Personenregister: Bei Pseudoelementen wie :after erhält das Attribut <i>link</i> nur noch Key oder ID des verlinkten Elements als Wert, sofern das verlinkte Element ebenfalls Bestandteil des Personenregisters ist. So wird verhindert, dass sich die Datei Personenregister.xml ein zweites Mal im Oxygen XML Author öffnet.</li>
                 <li>Ortsregister: Neu erstellte Orte erhalten automatisch eine eindeutige ID.</li>
                 <li>Ortsregister: Per Buttonklick erhalten alle Ortseinträge eine eindeutige ID. Bestehende IDs werden dabei nicht überschrieben/ersetzt.</li>
                 <li>Ortsregister: Bearbeitungsstatus eines Ortseintrags kann gesetzt und per Dropdown mutiert werden.</li>
@@ -33,7 +33,7 @@
                 <li>Personenregister: &lt;addname&gt; kann zu &lt;persName&gt; hinzugefügt werden via <i>Textauszeichnungen &#8594; Zusätzlicher Name</i></li>
                 <li>Personenregister: &lt;nameLink&gt; kann zu &lt;persName&gt; hinzugefügt werden via <i>Textauszeichnungen &#8594; nameLink</i>. Markierter Text wird mit &lt;nameLink&gt;-Tag umschlossen, ausgeschnitten und als letztes Unterelement von &lt;persName&gt; wieder eingefügt.</li>
                 <li>Personenregister: Einem Institutionsnamen kann ein Ort (&lt;locKey>) hinzugefügt werden.</li>
-                <li>Personenregister: Gruppen können hinzugefügt werden. (Bisher Java-fehlermeldung, weil im Framework-Code nur lokale Pfade definiert waren.)</li>
+                <li>Personenregister: Gruppen können hinzugefügt werden. (Bisher erschien eine Java-Fehlermeldung, weil im Framework-Code nur lokale Pfade definiert waren.)</li>
                 <li>Personenregister: Organisationen können hinzugefügt werden.</li>
                 <li>Personen- und Ortsregister: Editionsregistereinträge können per Oxygen-Menü hinzugefügt und anschliessend direkt im Eintrag mutiert werden.</li>
                 <li>Personen- und Ortsregister: Normdaten können per Oxygen-Menü hinzugefügt und anschliessend direkt im Eintrag per Dropdown mutiert werden.</li>
