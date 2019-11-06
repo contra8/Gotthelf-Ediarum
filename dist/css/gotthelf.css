@@ -896,21 +896,31 @@ pb:after {
   font-size: 60%;
   vertical-align: text-top;
 }
-persName:after{
+
+/*persName:after{*/
+persName[key]:after, persName:not([key=""]):after {
   /* link: "USERNAME:PASSWORD@SERVER ...#" attr(key); */
   link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Personenregister.xml#" attr(key);
   /*link: "#" attr("hkg:orgKey")*/
   content: " " url(gfx/link.png);
 }
+
+persName[key=""]:after, persName:not([key]):after {
+  link: "" !important;
+  content: "" !important;
+}
+
 persName{
 	color: red;
 	-oxy-display-tags: none;
 }
+
 placeName:after{
   /* link: "USERNAME:PASSWORD@SERVER ...#" attr(key); */
   link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Ortsregister.xml#" attr(key);
  content: " " url(gfx/link.png);
 }
+
 placeName{
 	color: green;
 	-oxy-display-tags: none;

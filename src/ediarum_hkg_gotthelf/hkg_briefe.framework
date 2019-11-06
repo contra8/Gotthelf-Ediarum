@@ -38,8 +38,8 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<!--String>${frameworks}/ediarum_hkg_gotthelf/css/hkg_drucktexte.css</String-->
-											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_drucktexte.css?hkg</String>
+											<!--String>${framework}/css/hkg_briefe.css</String-->
+											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_briefe.css?hkg</String>
 										</field>
 										<field name="title">
 											<String></String>
@@ -3123,10 +3123,10 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>person</String>
+											<String>create_persName_from_personenregister_for_msItem</String>
 										</field>
 										<field name="name">
-											<String>Personenregister</String>
+											<String>Neuer Name aus Personenregister (inkl. Link zum Register)</String>
 										</field>
 										<field name="description">
 											<String>Stellt eine Verknüpfung zum Personenregister her.</String>
@@ -3147,7 +3147,10 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String></String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -3156,21 +3159,258 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
 															</entry>
 															<entry>
-																<String>element</String>
-																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='"+ @xml:id+"'>&lt;/persName>"</String>
+																<String>node</String>
+																<String>//item</String>
 															</entry>
 															<entry>
 																<String>expression</String>
 																<String>.</String>
 															</entry>
 															<entry>
-																<String>node</String>
-																<String>//item</String>
+																<String>element</String>
+																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>" + . + "&lt;/persName>"</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>descendant-or-self::author</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>create_persName_from_personenregister_for_correspAction</String>
+										</field>
+										<field name="name">
+											<String>Neuer Name aus Personenregister (inkl. Link zum Register)</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Personenregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::correspAction or ancestor-or-self::msItem</String>
+													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>" + . + "&lt;/persName>"</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>create_persName_from_blank_for_msItem</String>
+										</field>
+										<field name="name">
+											<String>Neuer Name (ohne Link zum Personenregister)</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Personenregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::msItem</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;persName xmlns='http://www.tei-c.org/ns/1.0'>${ask('Vor- und Nachname')}&lt;/persName></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::msItem/author</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>create_persName_from_blank_for_correspAction</String>
+										</field>
+										<field name="name">
+											<String>Neuer Name (ohne Link zum Personenregister)</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Personenregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::correspAction or ancestor-or-self::msItem</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;persName xmlns='http://www.tei-c.org/ns/1.0'>${ask('Vor- und Nachname')}&lt;/persName></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::correspAction</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>link_persName_to_personenregister</String>
+										</field>
+										<field name="name">
+											<String>Namen mit Personenregister verknüpfen</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Personenregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::persName</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>key</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>@xml:id</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -3949,7 +4189,7 @@ cfd:${cfd}</String>
 													<toolbarEntry-array>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person</String>
+																<String>link_persName_to_personenregister</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>

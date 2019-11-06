@@ -201,7 +201,7 @@ seg[type='links'] > list > item[ana]:before {
 	
 }
 
-/* ***** Funktionen ***** */
+/* ***** Funktionen (Affiliations) ***** */
 seg[type='affiliations']:before {
     content: "Funktionen ";
     color: #AB0805;
@@ -222,15 +222,10 @@ seg[type='affiliations'] > list > item > affiliation {
 	background-color: white;
 	margin: 0.5em 0em;
 	max-width: 40em;
+	line-height: 40px;
 	-oxy-display-tags:none;
+	-oxy-placeholder-content: "Hier bitte Funktion eingeben";
 }
-
-/*
-affiliation:before {
-	font-size: 12px;
-    content: "[" attr(role) "] ";
-}
-*/
 
 affiliation:before {
 	content: 
@@ -239,12 +234,12 @@ affiliation:before {
 		"\A@hkg:orgKey: " oxy_textfield(
 			edit, "@hkg:orgKey");
 		/*link: attr(hkg|orgKey);*/
-		display: block;
-		background-color: #E8E8EB;
-		margin-bottom: 5px;
-		font-size: small;
-		font-weight: normal;
-		line-height: 2.5em;
+	display: block;
+	background-color: #E8E8EB;
+	margin-bottom: 5px;
+	font-size: small;
+	font-weight: normal;
+	line-height: 2.5em;
 }
 
 affiliation:after {
@@ -255,12 +250,12 @@ affiliation:after {
 		" " oxy_url("gfx/link_register.png")
 		;
 		link: attr(hkg|orgKey);
-		display: block;
-		background-color: #E8E8EB;
-		margin-top: 5px;
-		font-size: small;
-		font-weight: normal;
-		line-height: 2.5em;
+	display: block;
+	background-color: #E8E8EB;
+	margin-top: 5px;
+	font-size: small;
+	font-weight: normal;
+	line-height: 2.5em;
 }
 
 affiliation {
@@ -331,9 +326,11 @@ seg[type='SW_EB'] > note:before {
 }
 
 seg[type='HKG'] > note, seg[type='SW_EB'] > note {
+	-oxy-placeholder-content: "Hier die Seitenzahlen eingeben, durch Komma getrennt";
 	display: block;
 	width: 100%;
 	line-height: 2em;
+	height: 400px;
 	margin: 0.5em;
 	margin-bottom: 2em;
 	background-color: #FFFFFF;
@@ -525,6 +522,7 @@ placeName {
 	color: green;
 	-oxy-display-tags:inherit;
 }
+
 placeName[sameAs]:after {
     content: " " oxy_url("gfx/link_register.png");
 	/* link: "USERNAME:PASSWORD@SERVER ...#" attr(key); */

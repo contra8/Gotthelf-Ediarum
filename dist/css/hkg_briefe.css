@@ -1,0 +1,189 @@
+@import "gotthelf.css";
+@import "links.css";
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------
+----- Oxygen modifications to the TEI css available at  http://tei.svn.sourceforge.net/viewvc/tei/trunk/TEICSS/  ------
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+
+* {
+   /* -oxy-display-tags:none;*/
+}
+
+oxy|comment {
+    display:none;
+}
+
+TEI, TEI\.2 {
+    display:block;
+    counter-reset: note;
+    counter-reset:figure;
+    font-family: 'DejaVu Sans', 'Comic Sans MS', sans-serif;
+}
+
+div > head,
+body > div > head,
+body > div > div > head,
+body > div > div > div > head,
+body > div > div > div > div > head{
+    padding-top:0.6em;
+    padding-bottom:0.2em;
+    padding-left:0.2em;
+    padding-right:0em;
+    background-color:inherit;
+    color:#004477;
+    border-bottom:1px solid #004477;
+}
+
+head {
+    display:block;
+}
+
+div0 {
+  display: block;
+  margin-bottom: 1em;
+  counter-increment: div0;
+  counter-reset: div1;
+}
+text {
+  display: block;
+}
+
+div,
+body > div,
+body > div > div,
+body > div > div > div,
+body > div > div > div > div{
+    margin-bottom:0.2em;
+}
+
+cell[role='label'],
+row[role='label']{
+   color: inherit;
+   background-color: #CCEEFF;
+}
+
+table {
+  border: 1px solid #EEEFEE;
+}
+
+graphic{
+    content: attr(url, url);
+    width:attr(width, length);
+    height:attr(height, length);
+}
+
+/*
+ * Support for displaying unparsed entity images.
+*/
+figure[entity]{
+     content: oxy_url(oxy_unparsed-entity-uri(attr(entity))); 
+}
+
+hi[rend="sc"] {
+  display: inline;
+  text-decoration:overline;
+}
+
+/*
+    Foldable elements
+*/
+div, 
+div0, 
+div1, 
+div2, 
+div3, 
+div4, 
+div5, 
+div6, 
+div7 {
+    -oxy-foldable:true;
+    -oxy-not-foldable-child: head;
+}
+teiHeader {
+    -oxy-foldable: true;
+    -oxy-placeholder-content: oxy_substring(oxy_xpath('//fileDesc/titleStmt/title'), 7, oxy_indexof(oxy_xpath('//fileDesc/titleStmt/title'), '<', 1)) ;
+}
+
+:root {
+    -oxy-foldable:false;
+}
+/*Avoids displaying the empty element placeholder.*/
+lb:before{
+    content:"";
+}
+
+titleStmt{
+    display:block;
+}
+
+/*EXM-16532 Set some styles for gap*/
+gap {
+    display: -oxy-morph;
+    content: "[...]";
+    font-style: italic;
+}
+gap:after {
+    content: "";
+}
+
+correspAction[type='sent']:before {
+    content: "Absender\A" 
+        oxy_button(actionID, 'create_persName_from_personenregister_for_correspAction', showText, true)
+        oxy_button(actionID, 'create_persName_from_blank_for_correspAction', showText, true);
+        /*oxy_button(actionID, 'link_persName_to_personenregister', showText, true);*/
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+correspAction[type='received']:before {
+    content: "Empfänger\A" 
+        oxy_button(actionID, 'create_persName_from_personenregister_for_correspAction', showText, true)
+        oxy_button(actionID, 'create_persName_from_blank_for_correspAction', showText, true);
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+msItem:before {
+    content: "msItem - diese Überschrift kann geändert werden."
+        oxy_button(actionID, 'create_persName_from_personenregister_for_msItem', showText, true)
+        oxy_button(actionID, 'create_persName_from_blank_for_msItem', showText, true);
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+persName {
+    display: block;
+    background-color: #E8E8EB;
+    margin-top: 5px;
+    font-weight: bold;
+    line-height: 2.5em;
+    padding: 5px;
+}
+
+persName[key=""], persName:not([key]) {
+    color: #880000;
+}
+
+/*
+persName[key=""]:after, persName:not([key]):after {
+    link: "";
+    content: " ";
+}
+*/
+/*
+persName:before {
+	content: 
+		" " oxy_url("gfx/link_register.png");
+		link: attr(hkg|orgKey);
+		display: block;
+		background-color: #E8E8EB;
+		margin-top: 5px;
+		font-size: small;
+		font-weight: normal;
+		line-height: 2.5em;
+}
+*/

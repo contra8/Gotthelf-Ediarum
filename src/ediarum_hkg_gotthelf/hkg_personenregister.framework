@@ -1248,7 +1248,7 @@
 															</entry>
 															<entry>
 																<String>value</String>
-																<String>${ask('Bitte Zeitraum/Datum für Attribut "notBefore" angeben:')}</String>
+																<String>${ask('Bitte Zeitraum/Datum für Attribut "to" angeben:')}</String>
 															</entry>
 															<entry>
 																<String>editAttribute</String>
