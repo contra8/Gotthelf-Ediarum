@@ -15,12 +15,12 @@
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
             <p><b>Release Note 06.11.2019</b></p>
             <ul>
-                <li>CSS-Dateien auf HKG-Server ausgelagert (statt in lokalem Verzeichnis des Oxygen-Clients), um relative Pfade bei den Verlinkungen z. B. in Registern zu ermöglichen.</li>
-            <p><b>Release Note 03.11.2019</b></p>
-            <ul>
                 <li>Brief-Dateien: In den Metadaten (msItem, correspDesc) können &lt;persName&gt;-Knoten hinzugefügt werden. Diese können mit oder ohne Verlinkung ins Personenregister angelegt und auch nachträglich mit dem Personenregister verlinkt werden.</li>
                 <li>Brief-Dateien: Ist ein &lt;persName&gt;-Knoten mit dem Personenregister verknüpft, wird er farblich anders dargestellt und mit einem Pfeil am Ende des Namens versehen.</li>
             </ul>
+            <p><b>Release Note 03.11.2019</b></p>
+            <ul>
+                <li>CSS-Dateien auf HKG-Server ausgelagert (statt in lokalem Verzeichnis des Oxygen-Clients), um relative Pfade bei den Verlinkungen z. B. in Registern zu ermöglichen.</li>
                 <li>CSS Personenregister: Bei Pseudoelementen wie :after erhält das Attribut <i>link</i> nur noch Key oder ID des verlinkten Elements als Wert, sofern das verlinkte Element ebenfalls Bestandteil des Personenregisters ist. So wird verhindert, dass sich die Datei Personenregister.xml ein zweites Mal im Oxygen XML Author öffnet.</li>
                 <li>Ortsregister: Neu erstellte Orte erhalten automatisch eine eindeutige ID.</li>
                 <li>Ortsregister: Per Buttonklick erhalten alle Ortseinträge eine eindeutige ID. Bestehende IDs werden dabei nicht überschrieben/ersetzt.</li>
