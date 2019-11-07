@@ -175,10 +175,17 @@ seg[type='links']:before {
     color: #AB0805;
     font-weight:bold;
 }
+
+seg[type='links'] {
+	-oxy-folded: true;
+	-oxy-foldable: true;
+}
+
 seg[type='links'] > list {
     display:block;
     padding-left: 1em;
 }
+
 seg[type='links'] > list > item{
     display: block;
 	background-color: white;
@@ -204,8 +211,15 @@ seg[type='links'] > list > item[ana]:before {
 /* ***** Funktionen (Affiliations) ***** */
 seg[type='affiliations']:before {
     content: "Funktionen ";
-    color: #AB0805;
+	color: #AB0805;
+	-oxy-folded: true;
+	-oxy-foldable: true;
     font-weight:bold;
+}
+
+seg[type='affiliations'] {
+	-oxy-folded: true;
+	-oxy-foldable: true;
 }
 
 seg[type='affiliations'] > list {
@@ -213,10 +227,22 @@ seg[type='affiliations'] > list {
     padding-left: 1em;
 }
 
+/*
+seg[type='affiliations'] > list > item:before {
+	content: 
+		"@role: "
+		oxy_textfield(edit, "/affiliation@role")
+		"\A@hkg:orgKey: "
+		oxy_textfield(edit, "/affiliation/@hkg:orgKey");
+    display:block;
+}
+*/
+
 seg[type='affiliations'] > list > item {
     display:block;
 }
 
+/*
 seg[type='affiliations'] > list > item > affiliation {
     display: block;
 	background-color: white;
@@ -226,14 +252,27 @@ seg[type='affiliations'] > list > item > affiliation {
 	-oxy-display-tags:none;
 	-oxy-placeholder-content: "Hier bitte Funktion eingeben";
 }
+*/
 
 affiliation:before {
 	content: 
-		"@role: " oxy_textfield(
-			edit, "@role")
-		"\A@hkg:orgKey: " oxy_textfield(
-			edit, "@hkg:orgKey");
-		/*link: attr(hkg|orgKey);*/
+		"@role: "
+		oxy_textfield(edit, "@role", columns, 40)
+		"\A@hkg:orgKey: "
+		oxy_textfield(edit, "@hkg:orgKey", columns, 40)
+		"\A@when: "
+		oxy_textfield(edit, "@when", columns, 40)
+		"\A@from: "
+		oxy_textfield(edit, "@from", columns, 40)
+		"\A@to: "
+		oxy_textfield(edit, "@to", columns, 40)
+		"\A@notBefore: "
+		oxy_textfield(edit, "@notBefore", columns, 40)
+		"\A@notAfter: "
+		oxy_textfield(edit, "@notAfter", columns, 40)
+		"\A@mentioned: "
+		oxy_textfield(edit, "@hkg:mentioned", columns, 40)
+		;
 	display: block;
 	background-color: #E8E8EB;
 	margin-bottom: 5px;
@@ -247,8 +286,8 @@ affiliation:after {
 		oxy_xpath(
 			oxy_concat("/TEI/text/body/div/ab[@xml:id='", oxy_substring(attr(hkg|orgKey), 1), "']/seg[@type='name']/orgName/text()")
 		)
-		" " oxy_url("gfx/link_register.png")
-		;
+		" "
+		oxy_url("gfx/link_register.png");
 		link: attr(hkg|orgKey);
 	display: block;
 	background-color: #E8E8EB;
@@ -259,15 +298,17 @@ affiliation:after {
 }
 
 affiliation {
-    display:block;
-	background-color: white;
+    display: block;
+	background-color: #FFFFFF;
 	font-size: 16px;
 	font-weight: bold;
 	margin-bottom: 0.5em;
 	padding: 0.4em;
-	width: 100%;
-	-oxy-display-tags:none;
-	-oxy-placeholder-content: "Hier bitte Funktion eingeben";
+	width: 90%;
+	line-height: 40px;
+	-oxy-display-tags: none;
+	-oxy-placeholder-content: "Hier die Funktion eingeben";
+	-oxy-show-placeholder: always;
 }
 
 /* ***** Bände ***** */
@@ -287,6 +328,8 @@ seg[type='SW_EB']:before {
 seg[type='HKG'], seg[type='SW_EB'] {
 	background-color: #E8E8EB;
     display:block;
+	-oxy-folded: true;
+	-oxy-foldable: true;
 }
 
 seg[type='HKG'] > note:before {
@@ -315,7 +358,7 @@ seg[type='SW_EB'] > note:before {
             values, "SW, EB",
             labels, "SW, EB")
         oxy_textfield(           
-            edit, "@n")
+            edit, "@n", columns, 20)
 		"\ASeite(n):";
 	/*content: attr("source") " " attr("n") ", Seite(n) ";	*/
 	width: 100%;
@@ -342,6 +385,11 @@ seg[type='relations']:before {
     color: #AB0805;
     font-weight:bold;
 	-oxy-display-tags:none;
+}
+
+seg[type='relations'] {
+	-oxy-folded: true;
+	-oxy-foldable: true;
 }
 
 /* seg[type='relations'] note:before {

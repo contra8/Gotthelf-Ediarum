@@ -123,6 +123,7 @@ gap {
     content: "[...]";
     font-style: italic;
 }
+
 gap:after {
     content: "";
 }
@@ -147,12 +148,17 @@ correspAction[type='received']:before {
 }
 
 msItem:before {
-    content: "msItem - diese Überschrift kann geändert werden."
+    content: "msItem\A"
         oxy_button(actionID, 'create_persName_from_personenregister_for_msItem', showText, true)
         oxy_button(actionID, 'create_persName_from_blank_for_msItem', showText, true);
     display: block;
     font-size: 24px;
     font-weight: bold;
+}
+
+persName:after {
+    content: " " oxy_button(actionID, 'delete_persName', showText, true) !important;
+    padding-right: 0px;
 }
 
 persName {
@@ -162,6 +168,11 @@ persName {
     font-weight: bold;
     line-height: 2.5em;
     padding: 5px;
+}
+
+persName[key=""]:after, persName:not([key]):after {
+    content: " " oxy_button(actionID, 'delete_persName', showText, true) !important;
+    padding-right: 0px;
 }
 
 persName[key=""], persName:not([key]) {

@@ -3421,6 +3421,52 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
+											<String>delete_persName</String>
+										</field>
+										<field name="name">
+											<String>Lösche ganzen Namenseintrag (persName)</String>
+										</field>
+										<field name="description">
+											<String>Lösche ganzen Namenseintrag (persName)</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>elementLocation</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
 											<String>ort</String>
 										</field>
 										<field name="name">
