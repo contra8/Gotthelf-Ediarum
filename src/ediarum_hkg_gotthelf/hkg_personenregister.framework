@@ -209,7 +209,7 @@
 																<String>fragment</String>
 																<!--String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}"-->
 																<!--String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName> ${ask('Weiteres')}${caret}&lt;/seg>&lt;/ab></String-->
-																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname/n')}&lt;/forename>&lt;/persName>${caret}&lt;/seg>&lt;/ab></String>
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}">&lt;seg type="name">&lt;persName><!--&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname/n')}&lt;/forename>-->&lt;/persName>${caret}&lt;/seg>&lt;/ab></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -234,7 +234,8 @@
 															<entry>
 																<String>fragment</String>
 																<!--String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName> ${ask('Weiteres')}${caret}&lt;/seg>&lt;/ab></String-->
-																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName>${caret}&lt;/seg>&lt;/ab></String>
+																<!--String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName>${caret}&lt;/seg>&lt;/ab></String-->
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}">&lt;seg type="name">&lt;persName>&lt;/persName>${caret}&lt;/seg>&lt;/ab></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>

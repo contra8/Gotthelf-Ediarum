@@ -3160,6 +3160,9 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 													<field name="xpathCondition">
 														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
 													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
@@ -3167,21 +3170,18 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
 															</entry>
 															<entry>
-																<String>element</String>
-																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='"+ @xml:id+"'>&lt;/persName>"</String>
+																<String>node</String>
+																<String>//item</String>
 															</entry>
 															<entry>
 																<String>expression</String>
 																<String>.</String>
 															</entry>
 															<entry>
-																<String>node</String>
-																<String>//item</String>
+																<String>element</String>
+																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='"+ @xml:id+"'>&lt;/persName>"</String>
 															</entry>
 														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>

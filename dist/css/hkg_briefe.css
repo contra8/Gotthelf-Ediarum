@@ -128,6 +128,15 @@ gap:after {
     content: "";
 }
 
+msItem:before {
+    content: "msItem\A"
+        oxy_button(actionID, 'create_persName_from_personenregister_for_msItem', showText, true)
+        oxy_button(actionID, 'create_persName_from_blank_for_msItem', showText, true);
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 correspAction[type='sent']:before {
     content: "Absender\A" 
         oxy_button(actionID, 'create_persName_from_personenregister_for_correspAction', showText, true)
@@ -147,21 +156,13 @@ correspAction[type='received']:before {
     font-weight: bold;
 }
 
-msItem:before {
-    content: "msItem\A"
-        oxy_button(actionID, 'create_persName_from_personenregister_for_msItem', showText, true)
-        oxy_button(actionID, 'create_persName_from_blank_for_msItem', showText, true);
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-persName:after {
-    content: " " oxy_button(actionID, 'delete_persName', showText, true) !important;
+correspDesc persName:after, msItem persName:after {
+    content: " " url(gfx/link.png) " " oxy_button(actionID, 'delete_persName', showText, true) !important;
+    link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Ortsregister.xml#" attr(key);
     padding-right: 0px;
 }
 
-persName {
+correspDesc persName, correspDesc placeName, msItem persName, msItem placeName {
     display: block;
     background-color: #E8E8EB;
     margin-top: 5px;
@@ -170,12 +171,12 @@ persName {
     padding: 5px;
 }
 
-persName[key=""]:after, persName:not([key]):after {
-    content: " " oxy_button(actionID, 'delete_persName', showText, true) !important;
+correspDesc persName[key=""]:after, correspDesc persName:not([key]):after , msItem persName[key=""]:after, msItem persName:not([key]):after {
+    content: " " oxy_button(actionID, 'link_persName_to_personenregister', showText, true) " " oxy_button(actionID, 'delete_persName', showText, true) !important;
     padding-right: 0px;
-}
+  }
 
-persName[key=""], persName:not([key]) {
+correspDesc persName[key=""], correspDesc persName:not([key]), msItem persName[key=""], msItem persName:not([key]) {
     color: #880000;
 }
 
@@ -198,3 +199,7 @@ persName:before {
 		line-height: 2.5em;
 }
 */
+
+date {
+    -oxy-display-tags: none;
+}
