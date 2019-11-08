@@ -131,7 +131,12 @@ gap:after {
 msItem:before {
     content: "msItem\A"
         oxy_button(actionID, 'create_persName_from_personenregister_for_msItem', showText, true)
-        oxy_button(actionID, 'create_persName_from_blank_for_msItem', showText, true);
+        oxy_button(actionID, 'create_persName_from_blank_for_msItem', showText, true)
+        ;
+        /* "\A"
+        oxy_button(actionID, 'create_placeName_from_ortsregister_for_msItem', showText, true)
+        oxy_button(actionID, 'create_placeName_from_blank_for_msItem', showText, true);
+        */
     display: block;
     font-size: 24px;
     font-weight: bold;
@@ -140,26 +145,38 @@ msItem:before {
 correspAction[type='sent']:before {
     content: "Absender\A" 
         oxy_button(actionID, 'create_persName_from_personenregister_for_correspAction', showText, true)
-        oxy_button(actionID, 'create_persName_from_blank_for_correspAction', showText, true);
+        oxy_button(actionID, 'create_persName_from_blank_for_correspAction', showText, true) "\A"
+        oxy_button(actionID, 'create_placeName_from_ortsregister_for_correspAction', showText, true)
+        oxy_button(actionID, 'create_placeName_from_blank_for_correspAction', showText, true);
         /*oxy_button(actionID, 'link_persName_to_personenregister', showText, true);*/
     display: block;
     font-size: 24px;
     font-weight: bold;
+    margin-top: 40px;
 }
 
 correspAction[type='received']:before {
     content: "Empfänger\A" 
         oxy_button(actionID, 'create_persName_from_personenregister_for_correspAction', showText, true)
-        oxy_button(actionID, 'create_persName_from_blank_for_correspAction', showText, true);
+        oxy_button(actionID, 'create_persName_from_blank_for_correspAction', showText, true) "\A"
+        oxy_button(actionID, 'create_placeName_from_ortsregister_for_correspAction', showText, true)
+        oxy_button(actionID, 'create_placeName_from_blank_for_correspAction', showText, true);
     display: block;
     font-size: 24px;
     font-weight: bold;
+    margin-top: 40px;
 }
 
 correspDesc persName:after, msItem persName:after {
     content: " " url(gfx/link.png) " " oxy_button(actionID, 'delete_persName', showText, true) !important;
+    /*
     link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Ortsregister.xml#" attr(key);
     padding-right: 0px;
+    */
+}
+
+correspDesc placeName:after, msItem placeName:after {
+    content: " " url(gfx/link.png) " " oxy_button(actionID, 'delete_placeName', showText, true) !important;
 }
 
 correspDesc persName, correspDesc placeName, msItem persName, msItem placeName {
@@ -174,9 +191,15 @@ correspDesc persName, correspDesc placeName, msItem persName, msItem placeName {
 correspDesc persName[key=""]:after, correspDesc persName:not([key]):after , msItem persName[key=""]:after, msItem persName:not([key]):after {
     content: " " oxy_button(actionID, 'link_persName_to_personenregister', showText, true) " " oxy_button(actionID, 'delete_persName', showText, true) !important;
     padding-right: 0px;
-  }
+}
 
-correspDesc persName[key=""], correspDesc persName:not([key]), msItem persName[key=""], msItem persName:not([key]) {
+correspDesc placeName[key=""]:after, correspDesc placeName:not([key]):after , msItem placeName[key=""]:after, msItem placeName:not([key]):after {
+    content: " " oxy_button(actionID, 'link_placeName_to_ortsregister', showText, true) " " oxy_button(actionID, 'delete_placeName', showText, true) !important;
+    padding-right: 0px;
+}
+
+correspDesc persName[key=""], correspDesc persName:not([key]), msItem persName[key=""], msItem persName:not([key]),
+correspDesc placeName[key=""], correspDesc placeName:not([key]), msItem placeName[key=""], msItem placeName:not([key]) {
     color: #880000;
 }
 

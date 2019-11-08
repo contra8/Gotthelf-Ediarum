@@ -38,7 +38,9 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<!--String>${framework}/css/hkg_briefe.css</String-->
+											<!--
+											<String>${framework}/css/hkg_briefe.css</String>
+											-->
 											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_briefe.css?hkg</String>
 										</field>
 										<field name="title">
@@ -3305,6 +3307,138 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
+											<String>create_placeName_from_ortsregister_for_correspAction</String>
+										</field>
+										<field name="name">
+											<String>Neuer Ort aus Ortsregister (inkl. Link zum Register)</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Ortsregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::correspAction or ancestor-or-self::msItem</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/ortsregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>" + . + "&lt;/placeName>"</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>self::correspAction</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>create_placeName_from_ortsregister_for_msItem</String>
+										</field>
+										<field name="name">
+											<String>Neuer Ort aus Ortsregister (inkl. Link zum Register)</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Ortsregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::correspAction or ancestor-or-self::msItem</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/ortsregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>" + . + "&lt;/placeName>"</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>self::msItem/author</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
 											<String>create_persName_from_blank_for_msItem</String>
 										</field>
 										<field name="name">
@@ -3413,6 +3547,114 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
+											<String>create_placeName_from_blank_for_correspAction</String>
+										</field>
+										<field name="name">
+											<String>Neuer Ort (ohne Link zum Ortsregister)</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Ortsregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::correspAction or ancestor-or-self::msItem</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key="">${ask('Bitte Ortsnamen angeben:')}&lt;/placeName></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::correspAction</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>create_placeName_from_blank_for_msItem</String>
+										</field>
+										<field name="name">
+											<String>Neuer Ort (ohne Link zum Ortsregister)</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Ortsregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::correspAction or ancestor-or-self::msItem</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key="">${ask('Bitte Ortsnamen angeben:')}&lt;/placeName></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::msItem/author</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
 											<String>link_persName_to_personenregister</String>
 										</field>
 										<field name="name">
@@ -3447,6 +3689,72 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															<entry>
 																<String>URL</String>
 																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>key</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>@xml:id</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>link_placeName_to_ortsregister</String>
+										</field>
+										<field name="name">
+											<String>Ort mit Ortsregister verknüpfen</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verknüpfung zum Ortsregister her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::placeName</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/ortsregister.xml</String>
 															</entry>
 															<entry>
 																<String>node</String>
@@ -3525,10 +3833,56 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>ort</String>
+											<String>delete_placeName</String>
 										</field>
 										<field name="name">
-											<String>Ortsregister</String>
+											<String>Lösche den gesamten Ortseintrag (placeName)</String>
+										</field>
+										<field name="description">
+											<String>Lösche den gesamten Ortseintrag (placeName)</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>elementLocation</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>link_text_to_ortsregister</String>
+										</field>
+										<field name="name">
+											<String>Verknüpfung zum Ortsregister</String>
 										</field>
 										<field name="description">
 											<String>Stellt eine Verknüpfung zum Ortsregister her.</String>
@@ -3551,6 +3905,9 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 													<field name="xpathCondition">
 														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
 													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
@@ -3558,21 +3915,18 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 																<String>${HKG_SCHEMATA}/../data_copy/ortsregister.xml</String>
 															</entry>
 															<entry>
-																<String>element</String>
-																<String>"&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key='"+ @xml:id+"'>&lt;/placeName>"</String>
+																<String>node</String>
+																<String>//item</String>
 															</entry>
 															<entry>
 																<String>expression</String>
 																<String>.</String>
 															</entry>
 															<entry>
-																<String>node</String>
-																<String>//item</String>
+																<String>element</String>
+																<String>"&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key='"+ @xml:id+"'>&lt;/placeName>"</String>
 															</entry>
 														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -4298,7 +4652,7 @@ cfd:${cfd}</String>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>ort</String>
+																<String>link_text_to_ortsregister</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
