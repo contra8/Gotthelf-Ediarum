@@ -15,6 +15,10 @@
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
             <p><b>Release Note 08.11.2019</b></p>
             <ul>
+                <li></li>
+            </ul>
+            <p><b>Release Note 07.11.2019</b></p>
+            <ul>
                 <li>Briefdateien: Neben jedem Personeneintrag &lt;persName&gt; in &lt;msItem&gt; und &lt;correspDesc&gt; steht ein Button, mit dem der ganze Namenseintrag &lt;persName&gt; gelöscht werden kann.</li>
                 <li>Personenregister CSS: Für Affiliation-Einträge, die keinen Textwert haben, wird eine Eingabeaufforderung angezeigt, die gleichfalls dafür sorgt, dass das Eingabefeld nicht zuklappt.</li>
                 <li>Personenregister CSS: Für Affiliation-Einträge werden die zeitbezogenen Attribute @when, @to, @from, @notBefore, @notAfter und @mentioned direkt im Eintrag angezeigt und können auch direkt dort mutiert werden.</li>
