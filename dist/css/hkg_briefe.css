@@ -39,12 +39,17 @@ head {
     display:block;
 }
 
+body {
+    -oxy-display-tags: none;
+}
+
 div0 {
   display: block;
   margin-bottom: 1em;
   counter-increment: div0;
   counter-reset: div1;
 }
+
 text {
   display: block;
 }
@@ -131,8 +136,7 @@ gap:after {
 msItem:before {
     content: "msItem\A"
         oxy_button(actionID, 'create_persName_from_personenregister_for_msItem', showText, true)
-        oxy_button(actionID, 'create_persName_from_blank_for_msItem', showText, true)
-        ;
+        oxy_button(actionID, 'create_persName_from_blank_for_msItem', showText, true);
         /* "\A"
         oxy_button(actionID, 'create_placeName_from_ortsregister_for_msItem', showText, true)
         oxy_button(actionID, 'create_placeName_from_blank_for_msItem', showText, true);
@@ -167,7 +171,8 @@ correspAction[type='received']:before {
     margin-top: 40px;
 }
 
-correspDesc persName:after, msItem persName:after {
+/* correspDesc persName:after, msItem persName:after { */
+teiHeader persName:after {
     content: " " url(gfx/link.png) " " oxy_button(actionID, 'delete_persName', showText, true) !important;
     /*
     link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Ortsregister.xml#" attr(key);
@@ -175,11 +180,14 @@ correspDesc persName:after, msItem persName:after {
     */
 }
 
-correspDesc placeName:after, msItem placeName:after {
+/* correspDesc placeName:after, msItem placeName:after {*/
+teiHeader placeName:after {
     content: " " url(gfx/link.png) " " oxy_button(actionID, 'delete_placeName', showText, true) !important;
 }
 
-correspDesc persName, correspDesc placeName, msItem persName, msItem placeName {
+
+/* correspDesc persName, correspDesc placeName, msItem persName, msItem placeName { */
+teiHeader persName, teiHeader placeName {
     display: block;
     background-color: #E8E8EB;
     margin-top: 5px;
@@ -188,41 +196,44 @@ correspDesc persName, correspDesc placeName, msItem persName, msItem placeName {
     padding: 5px;
 }
 
-correspDesc persName[key=""]:after, correspDesc persName:not([key]):after , msItem persName[key=""]:after, msItem persName:not([key]):after {
-    content: " " oxy_button(actionID, 'link_persName_to_personenregister', showText, true) " " oxy_button(actionID, 'delete_persName', showText, true) !important;
+/* correspDesc persName[key=""]:after, correspDesc persName:not([key]):after , msItem persName[key=""]:after, msItem persName:not([key]):after { */
+teiHeader persName[key=""]:after, teiHeader persName:not([key]):after {
+        content: " " oxy_button(actionID, 'link_persName_to_personenregister', showText, true) " " oxy_button(actionID, 'delete_persName', showText, true) !important;
     padding-right: 0px;
 }
 
-correspDesc placeName[key=""]:after, correspDesc placeName:not([key]):after , msItem placeName[key=""]:after, msItem placeName:not([key]):after {
-    content: " " oxy_button(actionID, 'link_placeName_to_ortsregister', showText, true) " " oxy_button(actionID, 'delete_placeName', showText, true) !important;
+/* correspDesc placeName[key=""]:after, correspDesc placeName:not([key]):after , msItem placeName[key=""]:after, msItem placeName:not([key]):after { */
+teiHeader placeName[key=""]:after, teiHeader placeName:not([key]):after {
+        content: " " oxy_button(actionID, 'link_placeName_to_ortsregister', showText, true) " " oxy_button(actionID, 'delete_placeName', showText, true) !important;
     padding-right: 0px;
 }
 
-correspDesc persName[key=""], correspDesc persName:not([key]), msItem persName[key=""], msItem persName:not([key]),
-correspDesc placeName[key=""], correspDesc placeName:not([key]), msItem placeName[key=""], msItem placeName:not([key]) {
+/* correspDesc persName[key=""], correspDesc persName:not([key]), msItem persName[key=""], msItem persName:not([key]), */
+persName[key=""], persName:not([key]), placeName[key=""], placeName:not([key]) {
     color: #880000;
 }
 
-/*
-persName[key=""]:after, persName:not([key]):after {
-    link: "";
-    content: " ";
+history:before {
+    content: "History\A"
+        oxy_button(actionID, 'create_placeName_from_ortsregister_for_origPlace', showText, true)
+        oxy_button(actionID, 'create_placeName_from_blank_for_origPlace', showText, true);
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    -oxy-display-tags: none;
 }
-*/
-/*
-persName:before {
-	content: 
-		" " oxy_url("gfx/link_register.png");
-		link: attr(hkg|orgKey);
-		display: block;
-		background-color: #E8E8EB;
-		margin-top: 5px;
-		font-size: small;
-		font-weight: normal;
-		line-height: 2.5em;
-}
-*/
 
-date {
+origPlace > placeName:after {
+    content: " " oxy_button(actionID, 'link_placeName_from_origPlace_to_ortsregister', showText, true);
+}
+
+origPlace placeName {
+    -oxy-display-tags: none;
+    display: block;
+}
+
+date, origPlace placeName, p, label {
     -oxy-display-tags: none;
 }
