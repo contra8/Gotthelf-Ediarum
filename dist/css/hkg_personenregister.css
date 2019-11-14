@@ -227,32 +227,9 @@ seg[type='affiliations'] > list {
     padding-left: 1em;
 }
 
-/*
-seg[type='affiliations'] > list > item:before {
-	content: 
-		"@role: "
-		oxy_textfield(edit, "/affiliation@role")
-		"\A@hkg:orgKey: "
-		oxy_textfield(edit, "/affiliation/@hkg:orgKey");
-    display:block;
-}
-*/
-
 seg[type='affiliations'] > list > item {
     display:block;
 }
-
-/*
-seg[type='affiliations'] > list > item > affiliation {
-    display: block;
-	background-color: white;
-	margin: 0.5em 0em;
-	max-width: 40em;
-	line-height: 40px;
-	-oxy-display-tags:none;
-	-oxy-placeholder-content: "Hier bitte Funktion eingeben";
-}
-*/
 
 affiliation:before {
 	content: 
@@ -346,7 +323,7 @@ seg[type='HKG'] > note:before {
 	width: 100%;
     display: block;
 	padding-left: 0em;
-	line-height: 2em;
+	line-height: 1.8em;
 	background-color: #E8E8EB;
 }
 
@@ -358,13 +335,13 @@ seg[type='SW_EB'] > note:before {
             values, "SW, EB",
             labels, "SW, EB")
         oxy_textfield(           
-            edit, "@n", columns, 20)
+            edit, "@n", columns, 6)
 		"\ASeite(n):";
 	/*content: attr("source") " " attr("n") ", Seite(n) ";	*/
 	width: 100%;
 	display: block;
 	padding-left: 0em;
-	line-height: 2em;
+	line-height: 1.8em;
 	background-color: #E8E8EB;
 }
 
@@ -372,10 +349,9 @@ seg[type='HKG'] > note, seg[type='SW_EB'] > note {
 	-oxy-placeholder-content: "Hier die Seitenzahlen eingeben, durch Komma getrennt";
 	display: block;
 	width: 100%;
-	line-height: 2em;
-	height: 400px;
+	line-height: 1.8em;
 	margin: 0.5em;
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 	background-color: #FFFFFF;
 }
 

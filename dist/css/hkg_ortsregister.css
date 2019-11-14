@@ -158,10 +158,17 @@ seg[type='links']:before {
     color: #AB0805;
     font-weight:bold;
 }
+
+seg[type='links'] {
+	-oxy-folded: true;
+	-oxy-foldable: true;
+}
+
 seg[type='links'] > list {
     display:block;
     padding-left: 1em;
 }
+
 seg[type='links'] > list > item{
     display: block;
 	background-color: white;
@@ -306,12 +313,10 @@ seg[type='SW_EB']:before {
     font-weight:bold;
 }
 
-seg[type='HKG'] {
+seg[type='HKG'], seg[type='SW_EB'] {
     display:block;
-}
-
-seg[type='SW_EB'] {
-    display:block;
+	-oxy-folded: true;
+	-oxy-foldable: true;
 }
 
 seg[type='HKG'] > note:before {
@@ -336,11 +341,14 @@ seg[type='SW_EB'] > note:before {
             values, "SW, EB",
             labels, "SW, EB")
         oxy_textfield(           
-            edit, "@n")
-        " Seite(n) ";
+            edit, "@n", columns, 6)
+        "\ASeite(n) ";
     /*content: attr("source") " " attr("n") ", Seite(n) ";	*/
-    padding-left: 1em;
-	background-color: #E8E8EB;
+	width: 100%;
+    background-color: #E8E8EB;
+    display: block;
+    line-height: 1.8em;
+    padding-left: 0em;
 }
 
 seg[type='HKG'] > note, seg[type='SW_EB'] > note {
@@ -348,4 +356,7 @@ seg[type='HKG'] > note, seg[type='SW_EB'] > note {
 	margin: 0.5em;
 	background-color: #FFFFFF;
 	width: 51em;
+	width: 100%;
+	line-height: 1.8em;
+	margin-bottom: 1.5em;
 }
