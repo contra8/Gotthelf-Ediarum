@@ -1698,7 +1698,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;note source="HKG" n="${ask('Bitte Band angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Leerschlag getrennt)')}&lt;/note></String>
+																<String>&lt;note source="HKG" xmlns="http://www.tei-c.org/ns/1.0" n="${ask('Bitte Bandnummer angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Komma+Leerschlag getrennt)')}&lt;/note></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1722,7 +1722,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="HKG">&lt;note source="HKG" n="${ask('Bitte Band angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Leerschlag trennen)')}&lt;/note>&lt;/seg></String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="HKG">&lt;note source="HKG" n="${ask('Bitte Bandnummer angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Komma+Leerschlag trennen)')}&lt;/note>&lt;/seg></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1776,7 +1776,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0" source="${ask('Bitte Editionsregister angeben', editable_combobox, ('SW':'SW';'EB':'EB'), '')}" n="${ask('Bitte Band angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Leerschlag trennen)')}&lt;/note></String>
+																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0" source="${ask('Bitte Editionsregister angeben', editable_combobox, ('SW':'SW';'EB':'EB'), '')}" n="${ask('Bitte Bandnummer angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Komma+Leerschlag trennen)')}&lt;/note></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1800,7 +1800,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="SW_EB">&lt;note source="${ask('Bitte Editionsregister angeben', editable_combobox, ('SW':'SW';'EB':'EB'), '')}" n="${ask('Bitte Band angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Leerschlag trennen)')}&lt;/note>&lt;/seg></String>
+																<String>&lt;seg xmlns="http://www.tei-c.org/ns/1.0" type="SW_EB">&lt;note source="${ask('Bitte Editionsregister angeben', editable_combobox, ('SW':'SW';'EB':'EB'), '')}" n="${ask('Bitte Bandnummer angeben:')}">${ask('Bitte Seitenzahl(en) angeben (mehrere Seitenzahlen durch Komma+Leerschlag trennen)')}&lt;/note>&lt;/seg></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
