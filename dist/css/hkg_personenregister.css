@@ -95,8 +95,9 @@ ab:before {
 	content: "Bearbeitungsstatus: " oxy_combobox(           
 		edit, "@hkg:status",
 		editable, true,
-		values, "vorkontrolliert, kontrolliert, an_GND, inkl_GND",
-		labels, "vorkontrolliert, kontrolliert, an GND, inkl. GND") "                        ID: " attr("xml:id");
+		values, "vorkontrolliert, kontrolliert, an_GND, bei_GND, inkl_GND",
+		labels, "vorkontrolliert, kontrolliert, an GND, bei GND, inkl. GND") 
+		"                        ID: " attr("xml:id");
 	background-color: #E8E8EB;
 	width: 100%;
 	font-size: small;

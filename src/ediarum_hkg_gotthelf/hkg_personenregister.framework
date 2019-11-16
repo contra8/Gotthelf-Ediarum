@@ -180,7 +180,7 @@
 											<String>new_person</String>
 										</field>
 										<field name="name">
-											<String>Person</String>
+											<String>Persönchen</String>
 										</field>
 										<field name="description">
 											<String>Fügt einen neuen Personeintrag ein.</String>
