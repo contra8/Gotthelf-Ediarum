@@ -237,7 +237,7 @@ affiliation:before {
 		"@role: "
 		oxy_textfield(edit, "@role", columns, 40)
 		"\A@hkg:orgKey: "
-		oxy_textfield(edit, "@hkg:orgKey", columns, 40)
+		oxy_textfield(edit, "@hkg:orgKey", columns, 40) oxy_button(actionID, 'change_orgKey_in_affiliation', showText, true)
 		"\A@when: "
 		oxy_textfield(edit, "@when", columns, 40)
 		"\A@from: "
