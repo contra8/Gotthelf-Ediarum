@@ -1,0 +1,362 @@
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+@namespace xml url('http://www.w3.org/XML/1998/namespace');
+@namespace hkg url('http://www.gotthelf.unibe.ch');
+
+oxy|comment {
+    display: none ! important;
+}
+
+TEI {
+	font-family: 'DejaVu Sans', 'Comic Sans MS', sans-serif;
+}
+
+teiHeader {
+    padding-bottom: 2em;
+	background-color: #BDCBD3;
+	padding: 1em;
+	padding-top: 0em;
+}
+
+title {
+	color: white;
+    display: block;
+    text-align:left;
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    background-color: #AB0805;
+	padding: 0.5em;
+}
+
+publicationStmt, sourceDesc{
+	background-color: #E8E8EB;
+    display: block;
+    text-align: left;
+	padding: 0.5em 1em;
+}
+
+publicationStmt>p,sourceDesc>p {
+	background-color: white;
+	-oxy-display-tags: none;
+	padding: 0em 0.5em;
+}
+
+publicationStmt:before {
+	content: "publicationStmt: ";
+    font-weight: bold;
+	width: 10em;
+}
+
+sourceDesc:before {
+	content: "sourceDesc: ";
+    font-weight: bold;
+	width: 10em;
+}
+
+text {
+	background-color: #BDCBD3;
+	padding-bottom: 1em;
+}
+
+front {
+    margin-bottom: 3em;
+    margin-left: 1em;
+}
+
+head {
+    display: block;
+    font-size: 24px;
+    font-weight:bold;
+	color: #AB0805;
+}
+
+div > p {
+    display: block;
+	margin: 0.5em 0em;
+}
+
+body > div{
+    -oxy-foldable: true;
+	-oxy-folded:true;
+}
+body > div:before {
+    display:block;
+    content:attr(n);
+    font-size: 24px;
+    font-weight:bold;
+    color: #AB0805;
+}
+
+ab:before {
+	content: "Bearbeitungsstatus: " oxy_combobox(           
+		edit, "@hkg:status",
+		editable, true,
+		values, "in_Arbeit, kontrolliert",
+		labels, "in_Arbeit, kontrolliert") "                        ID: " attr("xml:id");
+	text-align: right;
+	width: 100%;
+    font-size: small;
+}
+
+ab {
+    display: block;
+    margin: 0.5em 0em 2em;
+	margin-right: 1em;
+    padding: 0.5em 1em;
+	padding-bottom: 2em;
+	background-color: #E8E8EB;
+}
+
+
+ab[type='group'] {
+    display: block;
+    border:thin solid #007744;
+    margin: 0.5em;
+    padding: 0.2em;
+}
+
+seg {
+	margin: 0.5em 0em;
+}
+
+/* ***** Ort ***** */
+seg[type='placeName'] {
+    display:block;
+}
+
+/* ***** Ortsname ***** */
+seg[type='placeName'] > settlement {
+    font-weight: bold;
+	font-size: 20px;
+	-oxy-display-tags: none;
+	content: oxy_textfield(edit, '#text', columns, 21, fontInherit, true);
+	visibility:-oxy-collapse-text;
+    -oxy-placeholder-content: "Ortsname";
+	margin-bottom: 1em;
+}
+
+/* ***** Region ***** */
+seg[type='placeName'] > region:before {
+	display: block;
+    color: #AB0805;
+    font-weight:bold;
+    content: "Region";
+}
+
+seg[type='placeName'] > region {
+	margin-left: 0em;
+	display: block;
+    -oxy-placeholder-content: "Region";
+	content: "   " oxy_textfield(edit, '#text', columns, 20, fontInherit, true);
+	visibility:-oxy-collapse-text;
+	margin-top: 0.5em;
+}
+
+/* ***** Links ***** */
+seg[type='links']:before {
+    content: "Normdaten";
+    color: #AB0805;
+    font-weight:bold;
+}
+
+seg[type='links'] {
+	-oxy-folded: true;
+	-oxy-foldable: true;
+}
+
+seg[type='links'] > list {
+    display:block;
+    padding-left: 1em;
+}
+
+seg[type='links'] > list > item{
+    display: block;
+	background-color: white;
+	margin: 0.5em 0em;
+	width: 23em;
+}
+
+seg[type='links'] > list > item[ana]:before {
+    /*
+    content: oxy_textfield(
+            edit, "@ana",
+            columns, 10) "   ";
+    */
+	content: oxy_combobox(           
+		edit, "@ana",
+		editable, true,
+		values, "GND, VIAF, histHub",
+		labels, "GND, VIAF, histHub");
+	background-color: #E8E8EB;
+	width: 5em;
+}
+
+/* ***** Beschreibung ***** */
+seg[type='descr'] {
+    display:block;
+}
+
+seg[type='descr']:before {
+    content: "Beschreibung ";
+    color: #AB0805;
+    font-weight:bold;
+}
+/*
+seg[type='descr'] > note:before {
+    display:block;
+	background-color: #E8E8EB;
+    content: oxy_combobox(           
+            edit, "@type",
+            editable, true,
+            values, "typ1, typ2",
+            labels, "Typ 1, Typ 2");
+	width: 5em;
+	padding-bottom: 0.5em;
+}
+*/
+seg[type='descr'] > note {
+	content: " ";
+	margin: 0.5em 0em;
+	background-color: white;
+    display:block;
+    margin-left: 1em;
+	margin-bottom: 1em;
+	max-width: 40em;
+}
+
+ref[type='seeAlso'][target] {
+    color: #3B68DB;
+	-oxy-display-tags: none;
+}
+ref[type='seeAlso'][target]:after {
+    content: " " oxy_url("gfx/link_register.png");
+    link: attr(target);
+}
+
+
+/* ***** Siehe Auch ***** */
+seg[type='seeAlso'] {
+    display:block;
+}
+
+seg[type='seeAlso']:before {
+    content: "Siehe auch ";
+    color: #AB0805;
+    font-weight:bold
+}
+seg[type='seeAlso'] > note {
+    display: block;
+    margin-left: 1em;
+}
+
+seg[type='seeAlso'] > ref {
+	margin: 0.5em 0em;
+    display:block;
+    margin-left: 1em;
+	content: oxy_textfield(edit, '#text', columns, 15);
+	visibility:-oxy-collapse-text;
+}
+seg[type='seeAlso'] > ref[target]:after{
+    content: " " oxy_textfield(edit, "@target", columns, 30) " " oxy_url("gfx/link_register.png");
+    link: attr(target);   
+}
+
+/* ***** Verweiseintrag ***** */
+ab[type='see']>placeName {
+	display: block;
+}
+
+ab[type='see'] > placeName > settlement {
+    font-weight: bold;
+	font-size: 20px;
+	font-style: italic;
+	-oxy-display-tags: none;
+	content: oxy_textfield(edit, '#text', columns, 20, fontInherit, true);
+	visibility:-oxy-collapse-text;
+    -oxy-placeholder-content: "Ortsname";
+	margin-bottom: 1em;
+}
+
+ab[type='see'] > ref:before {
+    content: "Siehe ";
+ 	font-style: italic;
+   font-weight:bold;
+}
+
+ab[type='see'] > ref {
+	display: block;
+	-oxy-display-tags: none;
+	margin: 0.5em 1em;
+}
+
+ab[type='see'] > ref > placeName {
+	font-style: italic;
+	margin: 0.5em 1em;
+	-oxy-display-tags: none;
+}
+ab[type='see'] > ref > placeName:after {
+	content: " " oxy_url("gfx/link_register.png");
+    link: attr(sameAs);
+}
+
+/* ***** Bände ***** */
+
+seg[type='HKG']:before {
+    content: "Editionsregister HKG";
+    color: #AB0805;
+    font-weight:bold;
+}
+
+seg[type='SW_EB']:before {
+    content: "Editionsregister SW/EB";
+    color: #AB0805;
+    font-weight:bold;
+}
+
+seg[type='HKG'], seg[type='SW_EB'] {
+    display:block;
+	-oxy-folded: true;
+	-oxy-foldable: true;
+}
+
+seg[type='HKG'] > note:before {
+	content: 
+		attr("source") " "
+		oxy_combobox(           
+			edit, "@n",
+			editable, true,
+			values, "A.2, A.6, D.1, D.2, D.3, E.1, F.1, F.2, F.3",
+			labels, "A.2, A.6, D.1, D.2, D.3, E.1, F.1, F.2, F.3")
+		" Seite(n) ";
+    /*content: attr("source") " " attr("n") ", Seite(n) ";	*/
+	padding-left: 1em;
+	background-color: #E8E8EB;
+}
+
+seg[type='SW_EB'] > note:before {
+	content:
+        oxy_combobox(           
+            edit, "@source",
+            editable, true,
+            values, "SW, EB",
+            labels, "SW, EB")
+        oxy_textfield(           
+            edit, "@n", columns, 6)
+        "\ASeite(n) ";
+    /*content: attr("source") " " attr("n") ", Seite(n) ";	*/
+	width: 100%;
+    background-color: #E8E8EB;
+    display: block;
+    line-height: 1.8em;
+    padding-left: 0em;
+}
+
+seg[type='HKG'] > note, seg[type='SW_EB'] > note {
+    display:block;
+	margin: 0.5em;
+	background-color: #FFFFFF;
+	width: 51em;
+	width: 100%;
+	line-height: 1.8em;
+	margin-bottom: 1.5em;
+}

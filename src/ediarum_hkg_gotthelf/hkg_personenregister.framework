@@ -35,7 +35,10 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<!--String>${framework}/css/hkg_personenregister.css</String-->
+											<!--
+											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String>
+											<String>${framework}/css/hkg_personenregister.css</String>
+											-->
 											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String>
 										</field>
 										<field name="title">
@@ -889,6 +892,70 @@
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>change_orgKey_in_affiliation</String>
+										</field>
+										<field name="name">
+											<String>Organisation ändern</String>
+										</field>
+										<field name="description">
+											<String>Ändert die Organisation einer Affiliation.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab[@type='person']/seg[@type='affiliations']/list</String>
+													</field>
+													<field name="operationID">
+														<!--String>ro.sync.ecss.extensions.commons.operations.ChangeAttributesOperation</String-->
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/organisationsregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>hkg:orgKey</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>"#" + @xml:id</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												</actionMode-array>
 										</field>
 									</action>
 									<action>

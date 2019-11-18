@@ -5,7 +5,7 @@
     <xt:extension id="ediarum-hkg-gotthelf">
         <!--xt:location href="http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/install/ediarum_hkg_gotthelf.zip" /-->
         <xt:location href="https://raw.githubusercontent.com/contra8/Gotthelf-Ediarum/master/dist/ediarum_hkg_gotthelf.zip" />
-        <xt:version>2019.1114.1</xt:version>
+        <xt:version>2019.1118.1</xt:version>
         <xt:oxy_version>17.0+</xt:oxy_version>
         <xt:type>framework</xt:type>
         <xt:author>Christian Achter</xt:author>
@@ -13,6 +13,10 @@
         <xt:description xmlns="http://www.w3.org/1999/xhtml">
             <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
+            <p><b>Release Note 18.11.2019</b></p>
+            <ul>
+                <li>Personenregister: Affiliation: ID der referenzierten Organisation kann nun per Button geändert werden.</li>
+            </ul>
             <p><b>Release Note 14.11.2019</b></p>
             <ul>
                 <li>Personenregister: Bugfix bei Erstellen eines neues Editionsregistereintrags. Das Attribut xmlns wurde ohne Wert angelegt und führte zu einem Schemafehler.</li>
