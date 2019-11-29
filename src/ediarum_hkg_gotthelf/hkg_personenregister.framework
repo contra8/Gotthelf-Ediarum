@@ -39,7 +39,7 @@
 											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String>
 											<String>${framework}/css/hkg_personenregister.css</String>
 											-->
-											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_personenregister.css?hkg</String>
+											<String>${framework}/css/hkg_personenregister.css</String>
 										</field>
 										<field name="title">
 											<String></String>
@@ -2862,6 +2862,60 @@ ancestor-or-self::note/parent::seg</String>
 											<Boolean>true</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>prepare_for_GND</String>
+										</field>
+										<field name="name">
+											<String>Einträge für GND extrahieren</String>
+										</field>
+										<field name="description">
+											<String>Extrahiert alle Einträge mit hkg:status="an_GND" und setzt diesen auf "bei_GND"</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>script</String>
+																<String>&lt;?xml version="1.0" encoding="UTF-8"?>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">&lt;xsl:import href="resources/prepare_personenregister_for_GND.xsl"/>&lt;/xsl:stylesheet> </String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>//body</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>//body</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -3183,6 +3237,12 @@ ancestor-or-self::note/parent::seg</String>
 											<toolbarItem>
 												<field name="actionID">
 													<String>create_missing_person_ids</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>prepare_for_GND</String>
 												</field>
 											</toolbarItem>
 										</toolbarEntry-array>

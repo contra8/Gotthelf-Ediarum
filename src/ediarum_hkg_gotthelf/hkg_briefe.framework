@@ -3150,7 +3150,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or ancestor-or-self::text or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
@@ -3899,7 +3899,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<String>link_placeName_to_ortsregister</String>
 										</field>
 										<field name="name">
-											<String>mit Ortsregister verknüpfen</String>
+											<String>Mit Ortsregister verknüpfen</String>
 										</field>
 										<field name="description">
 											<String>Stellt eine Verknüpfung zum Ortsregister her.</String>
@@ -4144,7 +4144,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>ancestor-or-self::text or self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>

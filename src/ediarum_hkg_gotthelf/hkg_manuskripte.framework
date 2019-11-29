@@ -38,7 +38,10 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<!--String>${frameworks}/ediarum_hkg_gotthelf/css/hkg_drucktexte.css</String-->
+											<!--
+											<String>${frameworks}/ediarum_hkg_gotthelf/css/hkg_drucktexte.css</String>
+											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_drucktexte.css?hkg</String>
+											-->
 											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_drucktexte.css?hkg</String>
 										</field>
 										<field name="title">

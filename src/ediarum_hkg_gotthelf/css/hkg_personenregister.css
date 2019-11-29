@@ -209,9 +209,9 @@ seg[type='links'] > list > item[ana]:before {
 	
 }
 
-/* ***** Funktionen (Affiliations) ***** */
+/* ***** Affiliationen ***** */
 seg[type='affiliations']:before {
-    content: "Funktionen ";
+    content: "Affiliationen ";
 	color: #AB0805;
 	-oxy-folded: true;
 	-oxy-foldable: true;
@@ -285,7 +285,7 @@ affiliation {
 	width: 90%;
 	line-height: 40px;
 	-oxy-display-tags: none;
-	-oxy-placeholder-content: "Hier die Funktion eingeben";
+	-oxy-placeholder-content: "Hier die Affiliation eingeben";
 	-oxy-show-placeholder: always;
 }
 
@@ -408,24 +408,29 @@ relation {
 }
 
 /* ***** Siehe ***** */
-seg[type='see']:before {
-    content: "Siehe ";
-    color: #AB0805;
-    font-weight:bold;
+seg[type='see'] > note > name[hkg|persKey]:before {
+	content: "Siehe: ";
+	color: #000000;
 }
 
-seg[type='see'] {
-    display: block;
-    color: #AB0805;
-    font-weight:bold;
-}
-
-seg[type='see'] > name {
+seg[type='see'] > note > name:not([hkg|persKey]) {
     display: block;
 	background-color: white;
-	margin: 0.5em 1em;
-	max-width: 40em;
+	font-size: 20px;
+	margin-bottom: 1em;
+	padding:0.2em;
 	-oxy-display-tags:none;
+}
+
+seg[type='see'] > note > name[hkg|persKey] {
+    color: #AB0805;
+    font-weight:bold;
+	-oxy-display-tags:none;
+}
+
+seg[type='see'] > note > name[hkg|persKey]:after {
+	content: " " url(gfx/link.png);
+	link: attr(hkg|persKey);
 }
 
 /* ***** Siehe auch ***** */

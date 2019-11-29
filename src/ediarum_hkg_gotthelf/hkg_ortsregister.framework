@@ -1221,11 +1221,11 @@ not(ancestor-or-self::ab/seg[@type='placeName']/region)</String>
 												</field>
 											</toolbar>
 											<toolbarSeparator/>
-											<toolbarItem>
+											<!--toolbarItem>
 												<field name="actionID">
 													<String>sort</String>
 												</field>
-											</toolbarItem>
+											</toolbarItem-->
 											<toolbarSeparator/>
 											<toolbarItem>
 												<field name="actionID">
