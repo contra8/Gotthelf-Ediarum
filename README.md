@@ -28,7 +28,8 @@ components:
 
 ## Documentation
 
-See release notes under https://github.com/contra8/Gotthelf-Ediarum/blob/master/dist/ediarum_hkg_gotthelf_install.xml
+See release notes under:
+https://github.com/contra8/Gotthelf-Ediarum/blob/master/dist/ediarum_hkg_gotthelf_install.xml
 
 ## License
 
