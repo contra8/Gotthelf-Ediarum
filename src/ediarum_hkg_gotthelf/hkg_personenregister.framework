@@ -180,7 +180,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>new_person</String>
+											<String>create_new_person</String>
 										</field>
 										<field name="name">
 											<String>Person</String>
@@ -257,7 +257,83 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>new_group</String>
+											<String>create_new_organization</String>
+										</field>
+										<field name="name">
+											<String>Organisation</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine neue Organisation hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::div[@n]</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="organization" xml:id="n_${id}">&lt;seg type="name">&lt;orgName>${ask('Name der Organisation:')}&lt;/orgName>&lt;/seg>&lt;/ab></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ab</String>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<!--String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="person" xml:id="n_${id}">&lt;seg type="name">&lt;persName>&lt;surname>${ask('Nachname')}&lt;/surname>, &lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName>${caret}&lt;/seg>&lt;/ab></String-->
+																<String>&lt;ab xmlns="http://www.tei-c.org/ns/1.0" type="organization" xml:id="n_${id}">&lt;seg type="name">&lt;orgName>${ask('Name der Organisation:')}&lt;/orgName>&lt;/seg>&lt;/ab></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::ab</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>create_new_group</String>
 										</field>
 										<field name="name">
 											<String>Gruppe</String>
@@ -290,11 +366,11 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>first action</String>
-																<String>new_group_structure</String>
+																<String>create_new_group_structure</String>
 															</entry>
 															<entry>
 																<String>second action</String>
-																<String>new_group_item</String>
+																<String>create_new_group_item</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -304,7 +380,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>new_group_structure</String>
+											<String>create_new_group_structure</String>
 										</field>
 										<field name="name">
 											<String>Gruppenstruktur</String>
@@ -379,7 +455,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>new_group_item</String>
+											<String>create_new_group_item</String>
 										</field>
 										<field name="name">
 											<String>Neues Gruppenmitglied</String>
@@ -2927,12 +3003,17 @@ ancestor-or-self::note/parent::seg</String>
 													<toolbarEntry-array>
 														<toolbarItem>
 															<field name="actionID">
-																<String>new_person</String>
+																<String>create_new_person</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>new_group</String>
+																<String>create_new_organization</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>create_new_group</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
@@ -2961,7 +3042,7 @@ ancestor-or-self::note/parent::seg</String>
 													<toolbarEntry-array>
 														<toolbarItem>
 															<field name="actionID">
-																<String>new_group_item</String>
+																<String>create_new_group_item</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>

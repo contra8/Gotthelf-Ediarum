@@ -18,8 +18,9 @@
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
             <p><b>Release Note 03.12.2019</b></p>
             <ul>
-                <li>Register: Folgender Bug wurde behoben: Wenn aus einer Briefdatei in eine Registerdatei (z. B. ins Orts- oder Personenregister) verlinkt wird, diese Registerdatei aber bereits in Oxygen XML Author geöffnet ist, wird sie bei Klick auf den Link nochmals geöffnet. Grund war, dass dieselbe Registerdatei zweimal über verschiedene URLs angesteuert wurde (/rest/ und /webdav/). Die URLs sind nun alle auf /webdav/ umgestellt, so dass Links in eine Registerdatei diese nur noch öffnen, wenn sie noch nicht geöffnet ist. Ist die Registerdatei hingegen bereits geöffnet, wechselt Oxygen XML Author in den Tab mit der offenen Registerdatei.</li>
-                <li>CSS-Dateien: Aus den Framework-Dateien werden wieder die lokal installierten CSS-Dateien angesprochen, die mit der Framework-Installationsdatei mitgeliefert und im lokalen Verzeichnis werden. (Vorher wurden auf hkg.germ.unibe.ch liegende CSS-Dateien referenziert.)</li>
+                <li>Personenregister: Per Menü kann eine neue Organisation hinzugefügt werden.</li>
+                <li>Register allgemein: Ein Link aus einer Textdatei (z. B. Briefe) in eine Registerdatei (z. B. Orts- oder Personenregister) öffnet diese Registerdatei <b>nicht</b> ein zweites Mal, wenn die Registerdatei bereits geöffnet ist. Stattdessen wechselt Oxygen XML Author in den Tab, in der die Registerdatei bereits angezeigt wird. Bisher konnte es passieren, dass dieselbe Registerdatei zweimal in Oxygen XML Author geöffnet wurde, weil dieselbe Datei unter zwei verschiedenen URLs (/rest vs. /webdav) aufgerufen wurde.</li>
+                <li>CSS-Dateien: Die Framework-Dateien referenzieren wieder die lokal installierten CSS-Dateien anstatt wie bisher die CSS-Dateien auf hkg.germ.unibe.ch.</li>
             </ul>
             <p><b>Release Note 29.11.2019 [2]</b></p>
             <ul>
