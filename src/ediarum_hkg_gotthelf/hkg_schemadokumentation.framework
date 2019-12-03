@@ -35,8 +35,11 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<!--String>${framework}/css/hkg_schemadokumentation.css</String-->
+											<!--
+											<String>${framework}/css/hkg_schemadokumentation.css</String>
 											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_schemadokumentation.css?hkg</String>
+											-->
+											<String>${framework}/css/hkg_schemadokumentation.css</String>
 										</field>
 										<field name="title">
 											<String>Schemadoku CSS</String>

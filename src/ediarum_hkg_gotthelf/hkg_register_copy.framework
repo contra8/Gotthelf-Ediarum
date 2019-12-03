@@ -35,8 +35,11 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<!--String>${frameworks}/ediarum_hkg_gotthelf/css/hkg_readonly.css</String-->
+											<!--
+											<String>${frameworks}/ediarum_hkg_gotthelf/css/hkg_readonly.css</String>
 											<String>http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/css/hkg_readonly.css?hkg</String>
+											-->
+											<String>${frameworks}/ediarum_hkg_gotthelf/css/hkg_readonly.css</String>
 										</field>
 										<field name="title">
 											<String></String>

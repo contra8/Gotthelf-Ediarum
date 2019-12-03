@@ -175,7 +175,7 @@ correspAction[type='received']:before {
 teiHeader persName:after {
     content: " " url(gfx/link.png) " " oxy_button(actionID, 'delete_persName', showText, true) !important;
     /*
-    link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/rest/db/data/Register/Ortsregister.xml#" attr(key);
+    link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/webdav/db/data/Register/Ortsregister.xml#" attr(key);
     padding-right: 0px;
     */
 }
