@@ -2052,7 +2052,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::ab[@type='organization']/seg[@type='name']/orgName</String>
+														<String>self::orgName</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
@@ -2082,6 +2082,78 @@
 															<entry>
 																<String>xpath to element of the attribute</String>
 																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::seg[@type='name']/orgName</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/ortsregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>hkg:locKey</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>"#" + @xml:id</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>./orgName</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::ab[@type='organization']/seg[@type='name']/orgName</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/ortsregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>hkg:locKey</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>"#" + @xml:id</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>./seg[@type='name']/orgName</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
