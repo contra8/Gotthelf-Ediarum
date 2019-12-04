@@ -1315,16 +1315,16 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 													<field name="xpathCondition">
 														<String></String>
 													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceTextOperation</String>
+													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>text</String>
-																<String> </String>
+																<String><![CDATA[&#xD;]]></String>
 															</entry>
 														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceTextOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -4022,11 +4022,11 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 														<String>n_combining_overline</String>
 													</field>
 												</toolbarItem>
-												<toolbarItem>
+												<!--toolbarItem>
 													<field name="actionID">
 														<String>no_break_space</String>
 													</field>
-												</toolbarItem>
+												</toolbarItem-->
 												<toolbarItem>
 													<field name="actionID">
 														<String>greek_capital_letter_psi</String>
