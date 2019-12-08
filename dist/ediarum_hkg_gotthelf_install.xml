@@ -18,14 +18,14 @@
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
             <p><b>Release Note 08.12.2019</b></p>
             <ul>
-                <li>Brief-, Drucktexte- und Manuskripte-Dateien: Bugfix für den Button, der ein geschütztes Leerzeichen einfügen soll (s. Release Note 04.12.2019 [1]). Button fügt nun ein &amp;#160; ein. Gleichzeitig Umbenennung der Funktion von <i>no_break_space</i> zu <i>insert_non_breaking_space</i></li>
+                <li>Brief-, Drucktexte- und Manuskripte-Dateien: Bugfix für den Button, der ein geschütztes Leerzeichen einfügen soll (s. <a href="#201912041">Release Note 04.12.2019 [1]</a>). Button fügt nun ein &amp;#160; ein. Gleichzeitig Umbenennung der Funktion von <i>no_break_space</i> zu <i>insert_non_breaking_space</i></li>
             </ul>
             <p><b>Release Note 04.12.2019 [2]</b></p>
             <ul>
                 <li>Personenregister: Bugfix für das Hinzufügen eines Ortsverweises (locKey) zu einer Organisation</li>
                 <li>Personenregister CSS: Aufnahme Wert "recherchen_offen" für Bearbeitungsstatus hkg:status (CSS-Anpassung).</li>
             </ul>
-            <p><b>Release Note 04.12.2019 [1]</b></p>
+            <p><b><a id="201912041">Release Note 04.12.2019 [1]</a></b></p>
             <ul>
                 <li>Textdateien (Frameworks Briefe, Drucktexte und Manuskripte, jeweils Action "no_break_space"): Button zum Einfügen eines geschützten Leerzeichens ausgeblendet, da dieser nicht korrekt arbeitet (fügt nur einen "einfachen" Leerschlag ein). Nach Reparatur kann der Button wieder eingefügt werden.</li>
             </ul>
