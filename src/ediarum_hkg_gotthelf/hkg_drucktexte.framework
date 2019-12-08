@@ -1289,13 +1289,13 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>no_break_space</String>
+											<String>insert_non_breaking_space</String>
 										</field>
 										<field name="name">
 											<String>Geschütztes Leerzeichen</String>
 										</field>
 										<field name="description">
-											<String>Fügt ein geschütztes Leerzeichen ein.</String>
+											<String>Fügt ein - in der Regel - geschütztes Leerzeichen ein.</String>
 										</field>
 										<field name="largeIconPath">
 											<String>${framework}/icons/no_break_space.gif</String>
@@ -1322,7 +1322,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>text</String>
-																<String><![CDATA[&#xD;]]></String>
+																<String>&#160;</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -4022,11 +4022,11 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 														<String>n_combining_overline</String>
 													</field>
 												</toolbarItem>
-												<!--toolbarItem>
+												<toolbarItem>
 													<field name="actionID">
-														<String>no_break_space</String>
+														<String>insert_non_breaking_space</String>
 													</field>
-												</toolbarItem-->
+												</toolbarItem>
 												<toolbarItem>
 													<field name="actionID">
 														<String>greek_capital_letter_psi</String>

@@ -1278,7 +1278,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>no_break_space</String>
+											<String>insert_non_breaking_space</String>
 										</field>
 										<field name="name">
 											<String>Geschütztes Leerzeichen</String>
@@ -1304,16 +1304,16 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 													<field name="xpathCondition">
 														<String></String>
 													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceTextOperation</String>
+													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>text</String>
-																<String> </String>
+																<String>&#160;</String>
 															</entry>
 														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceTextOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -4067,7 +4067,7 @@ cfd:${cfd}</String>
 												</toolbarItem>
 												<toolbarItem>
 													<field name="actionID">
-														<String>no_break_space</String>
+														<String>insert_non_breaking_space</String>
 													</field>
 												</toolbarItem>
 												<toolbarItem>
