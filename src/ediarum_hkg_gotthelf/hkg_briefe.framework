@@ -3229,7 +3229,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															</entry>
 															<entry>
 																<String>element</String>
-																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>" + . + "&lt;/persName>"</String>
+																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>" + //name + "&lt;/persName>"</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -3295,7 +3295,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															</entry>
 															<entry>
 																<String>element</String>
-																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>" + . + "&lt;/persName>"</String>
+																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>" + //name + "&lt;/persName>"</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
