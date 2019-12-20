@@ -509,6 +509,10 @@ surname {
 	-oxy-placeholder-content: "Hier bitte den Nachnamen eingeben";
 }
 
+surname:after, persName:after {
+	content: " ";	
+}
+
 forename{
 	text-decoration: underline;
 	-oxy-display-tags:inherit;
