@@ -479,7 +479,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::ab[@type='group']/seg/list</String>
+														<String>ancestor-or-self::ab[@type='group']/seg[@type='name']/list</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterAtOperation</String>
@@ -504,7 +504,7 @@
 															<entry>
 																<String>element</String>
 																<!--String>"&lt;item xmlns="http://www.tei-c.org/ns/1.0">&lt;name sameAs='#" + @xml:id + "'>" + . + "&lt;/name>&lt;note>${caret}&lt;/note>&lt;/item>"</String-->
-																<String>"&lt;item xmlns="http://www.tei-c.org/ns/1.0">&lt;name hkg:persKey='#" + @xml:id + "'>" + . + "&lt;/name>&lt;/item>"</String>
+																<String>"&lt;item xmlns="http://www.tei-c.org/ns/1.0">&lt;name hkg:persKey='#" + @xml:id + "'>" + //name + "&lt;/name>&lt;/item>"</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -544,7 +544,7 @@
 															<entry>
 																<String>element</String>
 																<!--String>"&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;name sameAs='#" + @xml:id + "'>" + . + "&lt;/name>&lt;note>${caret}&lt;/note>&lt;/item>&lt;/list>"</String-->
-																<String>"&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;name hkg:persKey='#" + @xml:id + "'>" + . + "&lt;/name>&lt;/item>&lt;/list>"</String>
+																<String>"&lt;list xmlns="http://www.tei-c.org/ns/1.0">&lt;item>&lt;name hkg:persKey='#" + @xml:id + "'>" + //name + "&lt;/name>&lt;/item>&lt;/list>"</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>

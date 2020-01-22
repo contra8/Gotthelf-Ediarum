@@ -499,7 +499,7 @@ ab[type='group'] > seg > list > item > name {
 	margin: 0.5em 7em;
 	max-width: 34em;
 	-oxy-display-tags:none;
-	-oxy-placeholder-content: "Beschreibung";
+	-oxy-placeholder-content: "Listeneintrag ohne Content (Name)";
 }
 
 /* ***** Inline-Elemente ***** */
