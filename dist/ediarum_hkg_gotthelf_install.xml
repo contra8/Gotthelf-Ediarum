@@ -8,7 +8,7 @@
         <xt:location href="http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/install/ediarum_hkg_gotthelf.zip" />
         -->
         <xt:location href="https://raw.githubusercontent.com/contra8/Gotthelf-Ediarum/master/dist/ediarum_hkg_gotthelf.zip" />
-        <xt:version>2020.0122.1</xt:version>
+        <xt:version>2020.0206.1</xt:version>
         <xt:oxy_version>17.0+</xt:oxy_version>
         <xt:type>framework</xt:type>
         <xt:author>Christian Achter</xt:author>
@@ -16,6 +16,11 @@
         <xt:description xmlns="http://www.w3.org/1999/xhtml">
             <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
+            <p><b>Release Note 06.02.2020</b></p>
+            <ul>
+                <li>"Zwischendatei" Personenregister (data_copy/personenregister.xml): In Weiterentwicklung zum Release am 9.12.2019 werden aus dem Personenregister Vor- und Nachname nicht mehr zweimal in den &lt;item&gt;-Node geschrieben (einmal zum Sortieren, einmal als Node &lt;name&gt; zum Übernehmen in die Textdateien), sondern stattdessen als Attribut @name gespeichert. Den Wert dieses neuen Attributes können die Textdateien direkt übernehmen (siehe nachfolgenden Punkt).</li>
+                <li>Briefdateien: Beim Einfügen von Namen aus dem Personenregister in die Metadaten (msItem, correspAction) wird neu nur noch der Wert des Attributs @name aus der "Zwischendatei" übernommen.</li>
+            </ul>
             <p><b>Release Note 22.01.2020</b></p>
             <ul>
                 <li>Personenregister: Bug behoben, wenn einer Gruppe ein neues Mitglied hinzugefügt wird (Gruppe auswählen &gt; "Gruppe bearbeiten" &gt; "Neues Gruppenmitglied"). Bug war ein Nebeneffekt vom Release am 09.12.2019.</li>
@@ -27,7 +32,7 @@
             <p><b>Release Note 12.12.2019</b></p>
             <ul>
                 <li>Personenregister: Bei Einfügen eines neuen Personeneintrags wird zwischen &lt;surname&gt; und &lt;forename&gt; kein Komma mehr gesetzt.</li>
-                <li>Personenregister: Im Author-Mdous fügt das CSS nach &lt;surname&gt; einen Leerschlag ein, damit zwischen und &lt;forename&gt; ein Abstand angezeigt wird.</li>
+                <li>Personenregister: Im Author-Modus fügt das CSS nach &lt;surname&gt; einen Leerschlag ein, damit zwischen und &lt;forename&gt; ein Abstand angezeigt wird.</li>
             </ul>
             <p><b>Release Note 09.12.2019</b></p>
             <ul>
