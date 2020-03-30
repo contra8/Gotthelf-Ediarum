@@ -16,6 +16,10 @@
         <xt:description xmlns="http://www.w3.org/1999/xhtml">
             <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
+            <p><b>Release Note 30.03.2020</b></p>
+            <ul>
+                <li>Briefdateien: Texte im &lt;body&gt; können nun mit einer Organisation verlinkt werden. Sie werden anschliessend farblich hervorgehoben und ein Pfeil als Link zum Registereintrag wird angezeigt.</li>
+            </ul>
             <p><b>Release Note 06.02.2020</b></p>
             <ul>
                 <li>"Zwischendatei" Personenregister (data_copy/personenregister.xml): In Weiterentwicklung zum Release am 9.12.2019 werden aus dem Personenregister Vor- und Nachname nicht mehr zweimal in den &lt;item&gt;-Node geschrieben (einmal zum Sortieren, einmal als Node &lt;name&gt; zum Übernehmen in die Textdateien), sondern stattdessen als Attribut @name gespeichert. Den Wert dieses neuen Attributes können die Textdateien direkt übernehmen (siehe nachfolgenden Punkt).</li>

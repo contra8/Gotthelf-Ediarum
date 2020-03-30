@@ -898,7 +898,7 @@ pb:after {
 }
 
 /*persName:after{*/
-persName[key]:after, persName:not([key=""]):after {
+persName[key]:after, persName:not([key=""]):after, orgName[key]:after, orgName:not([key=""]):after {
   /* link: "USERNAME:PASSWORD@SERVER ...#" attr(key); */
   link: oxy_url(oxy_substring(oxy_base-uri(), 3, 7)) "/exist/webdav/db/data/Register/Personenregister.xml#" attr(key);
   /*link: "#" attr("hkg:orgKey")*/
@@ -910,7 +910,7 @@ persName[key=""]:after, persName:not([key]):after {
   content: "" !important;
 }
 
-persName{
+persName, orgName {
 	color: red;
 	-oxy-display-tags: none;
 }
