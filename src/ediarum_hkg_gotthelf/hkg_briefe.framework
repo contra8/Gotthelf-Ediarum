@@ -3229,7 +3229,69 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															</entry>
 															<entry>
 																<String>element</String>
-																<String>"&lt;orgName xmlns='http://www.tei-c.org/ns/1.0' key='"+ @xml:id+"'>&lt;/orgName>"</String>
+																<String>"&lt;orgName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "'>&lt;/orgName>"</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>create_milestone_from_organization_register</String>
+										</field>
+										<field name="name">
+											<String>Verlinkung mit einer Organisation (als Milestone)</String>
+										</field>
+										<field name="description">
+											<String>Stellt eine Verlinkung zu einer Organisation her.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or ancestor-or-self::text or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertIndexOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/organisationenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>id</String>
+																<String>${id}</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;orgName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "' xml:id='start_" + $[ID] + "' />$[SELECTION]&lt;orgName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "' xml:id='stop_" + $[ID] + "' />"</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -4944,6 +5006,11 @@ cfd:${cfd}</String>
 												</field>
 												<field name="toolbarEntriesDescriptorList">
 													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>create_milestone_from_organization_register</String>
+															</field>
+														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
 																<String>link_text_to_personenregister</String>
