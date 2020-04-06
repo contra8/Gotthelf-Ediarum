@@ -868,7 +868,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
-																<String>${HKG_SCHEMATA}/../data_copy/organisationsregister.xml</String>
+																<String>${HKG_SCHEMATA}/../data_copy/organisationenregister.xml</String>
 															</entry>
 															<entry>
 																<String>node</String>
@@ -1004,7 +1004,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
-																<String>${HKG_SCHEMATA}/../data_copy/organisationsregister.xml</String>
+																<String>${HKG_SCHEMATA}/../data_copy/organisationenregister.xml</String>
 															</entry>
 															<entry>
 																<String>node</String>
