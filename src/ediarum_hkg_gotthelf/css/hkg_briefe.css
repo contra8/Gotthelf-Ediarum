@@ -237,3 +237,7 @@ origPlace placeName {
 date, origPlace placeName, p, label {
     -oxy-display-tags: none;
 }
+
+orgName:not([key]):after {
+    content: "";
+}

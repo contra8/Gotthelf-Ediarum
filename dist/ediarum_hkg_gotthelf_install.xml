@@ -16,6 +16,10 @@
         <xt:description xmlns="http://www.w3.org/1999/xhtml">
             <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
+            <p><b>Release Note 08.04.2020</b></p>
+            <ul>
+                <li>Briefe: Wenn ein Milestone für &lt;orgName&gt; eingefügt wird, erhält nur der "vordere" Milestone das Attribut key für den Link ins Personenregister. Zusätzlich wurde das CSS angepasst, dass nur ein verlinkter Pfeil angezeigt wird (vor dem &lt;orgName&gt;).</li>
+            </ul>
             <p><b>Release Note 06.04.2020 [2]</b></p>
             <ul>
                 <li>Briefe: Neue Funktion eingefügt, die Verlinkungen zum Organisationenregister als Milestone einfügt.</li>
