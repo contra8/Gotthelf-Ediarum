@@ -3291,7 +3291,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															</entry>
 															<entry>
 																<String>element</String>
-																<String>"&lt;orgName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "' xml:id='start_" + $[ID] + "' />$[SELECTION]&lt;orgName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "' xml:id='stop_" + $[ID] + "' />"</String>
+																<String>"&lt;orgName xmlns='http://www.tei-c.org/ns/1.0' key='" + @xml:id + "' xml:id='start_" + $[ID] + "' />$[SELECTION]&lt;orgName xmlns='http://www.tei-c.org/ns/1.0' xml:id='stop_" + $[ID] + "' />"</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
