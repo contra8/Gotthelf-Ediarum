@@ -27,6 +27,7 @@
 							<String>${frameworks}/tei/resources/</String>
 							<String>${frameworks}/tei/i18n/</String>
 							<String>${frameworks}/ediarum_hkg_gotthelf/ediarum.jar</String>
+							<String>${frameworks}/ediarum_hkg_gotthelf/ediarum-3.1.0.jar</String>
 						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
@@ -3102,20 +3103,29 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 													<field name="xpathCondition">
 														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
 													</field>
+													<field name="operationID">
+														<!--String>org.bbaw.telota.ediarum.SurroundWithElementsOperation</String-->
+														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
+													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
-																<String>elements</String>
-																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="kommentar" xml:id="start_$[ID]"/>$[SELECTION]&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="kommentar" xml:id="stop_$[ID]"/></String>
+																<String>id</String>
+																<String>lem_${id}</String>
 															</entry>
 															<entry>
-																<String>id</String>
-																<String>lem${uuid}</String>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" type="annotations" spanTo="$ID"/></String>
 															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="$ID"/></String>
+															</entry>
+															<!--entry>
+																<String>elements</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="kommentar" xml:id="start_$[ID]"/>$[SELECTION]&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="kommentar" xml:id="stop_$[ID]"/></String>
+															</entry-->
 														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.SurroundWithElementsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
