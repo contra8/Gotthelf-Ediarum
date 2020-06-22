@@ -8,7 +8,7 @@
         <xt:location href="http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/install/ediarum_hkg_gotthelf.zip" />
         -->
         <xt:location href="https://raw.githubusercontent.com/contra8/Gotthelf-Ediarum/master/dist/ediarum_hkg_gotthelf.zip" />
-        <xt:version>2020.0614.1</xt:version>
+        <xt:version>2020.0622.1</xt:version>
         <xt:oxy_version>17.0+</xt:oxy_version>
         <xt:type>framework</xt:type>
         <xt:author>Christian Achter</xt:author>
@@ -16,6 +16,10 @@
         <xt:description xmlns="http://www.w3.org/1999/xhtml">
             <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/dipl_ing_fh_achter_christian/" target="_blank">Christian Achter</a>.</p>
+            <p><b>Release Note 22.06.2020</b></p>
+            <ul>
+                <li>Briefe: Verweis auf Stellenkommentar als XML-Milestone: erzeugter XML-Code überarbeitet/erweitert.</li>
+            </ul>
             <p><b>Release Note 16.06.2020</b></p>
             <ul>
                 <li>Briefe: Verweis auf Stellenkommentar wird neu als XML-Milestone eingesetzt, um im Brieftext der Standoff-Problematik gerecht zu werden.</li>

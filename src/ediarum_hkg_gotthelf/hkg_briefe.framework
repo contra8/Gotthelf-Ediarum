@@ -3115,11 +3115,11 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															</entry>
 															<entry>
 																<String>first element</String>
-																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" type="annotations" spanTo="$ID"/></String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" type="annotations" spanTo="#$ID" /></String>
 															</entry>
 															<entry>
 																<String>second element</String>
-																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="$ID"/></String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="$ID" type="indexed_anchor" /></String>
 															</entry>
 															<!--entry>
 																<String>elements</String>
