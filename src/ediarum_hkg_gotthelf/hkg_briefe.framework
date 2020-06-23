@@ -3119,7 +3119,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															</entry>
 															<entry>
 																<String>second element</String>
-																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="$ID" type="indexed_anchor" /></String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="$ID" type="indexed_area" /></String>
 															</entry>
 															<!--entry>
 																<String>elements</String>
