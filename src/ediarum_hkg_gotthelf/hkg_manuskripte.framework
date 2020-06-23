@@ -3102,7 +3102,26 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 													<field name="xpathCondition">
 														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
 													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
+													</field>
 													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>id</String>
+																<String>lem_${id}</String>
+															</entry>
+															<entry>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" type="annotations" spanTo="#$ID" /></String>
+															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="$ID" type="indexed_area" /></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<!--field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>elements</String>
@@ -3116,7 +3135,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithElementsOperation</String>
-													</field>
+													</field-->
 												</actionMode>
 											</actionMode-array>
 										</field>

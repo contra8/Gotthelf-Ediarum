@@ -3136,6 +3136,80 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
+											<String>link_text_to_personenregister_as_milestone</String>
+										</field>
+										<field name="name">
+											<String>Verweis auf Personenregister (als Milestone)</String>
+										</field>
+										<field name="description">
+											<String>Markiert einen Bereich als Verweis ins Personenregister</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.RegisterSurroundWithDifferentFragmentsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>${HKG_SCHEMATA}/../data_copy/personenregister.xml</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//item</String>
+															</entry>
+															<entry>
+																<String>namespaces</String>
+																<String>tei:http://www.tei-c.org/ns/1.0</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>phrase</String>
+																<String>.</String>
+															</entry>
+															<entry>
+																<String>id</String>
+																<String>pers_${id}</String>
+															</entry>
+															<entry>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" type="persons" spanTo="#$ID" /></String>
+															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="$ID" type="indexed_area" /></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
 											<String>link_text_to_personenregister</String>
 										</field>
 										<field name="name">
@@ -5044,6 +5118,11 @@ cfd:${cfd}</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>lemma</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>link_text_to_personenregister_as_milestone</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>
