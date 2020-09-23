@@ -2077,7 +2077,7 @@
 															</entry>
 															<entry>
 																<String>attribute value</String>
-																<String>"#" + @xml:id</String>
+																<String>@xml:id</String>
 															</entry>
 															<entry>
 																<String>xpath to element of the attribute</String>
