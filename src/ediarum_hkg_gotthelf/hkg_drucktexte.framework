@@ -2580,6 +2580,330 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
+											<String>create_lemma_for_comment_as_milestone</String>
+										</field>
+										<field name="name">
+											<String>Kommentar-Lemma</String>
+										</field>
+										<field name="description">
+											<String>Markiert einen Bereich als Lemma für den Kommentar</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>id</String>
+																<String>lem_${id}</String>
+															</entry>
+															<entry>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" type="annotations" corresp="" /></String>
+															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="indexed_area" xml:id="$ID" /></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>link_text_to_personenregister_as_milestone</String>
+										</field>
+										<field name="name">
+											<String>Link zu Person (Register)</String>
+										</field>
+										<field name="description">
+											<String>Markiert einen Bereich als Link zu einer Person im Personenregister</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>id</String>
+																<String>pers_${id}</String>
+															</entry>
+															<entry>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" type="person" corresp="${ask('ID der Person eingeben - wenn nicht bekannt, bitte leerlassen!')}" /></String>
+															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="indexed_area" xml:id="$ID" /></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>link_text_to_ortsregister_as_milestone</String>
+										</field>
+										<field name="name">
+											<String>Link zu Ort (Register)</String>
+										</field>
+										<field name="description">
+											<String>Markiert einen Bereich als Link zu einem Ort im Ortsregister</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>id</String>
+																<String>place_${id}</String>
+															</entry>
+															<entry>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" type="place" corresp="${ask('ID des Ortes eingeben - wenn nicht bekannt, bitte leerlassen!')}" /></String>
+															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="indexed_area" xml:id="$ID" /></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>link_text_to_organization_in_personenregister_as_milestone</String>
+										</field>
+										<field name="name">
+											<String>Link zu Organisation (Register)</String>
+										</field>
+										<field name="description">
+											<String>Markiert einen Bereich als Link zu einer Organisation im Personenregister</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>id</String>
+																<String>org_${id}</String>
+															</entry>
+															<entry>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" type="organization" corresp="${ask('ID der Organisation eingeben - wenn nicht bekannt, bitte leerlassen!')}" /></String>
+															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="indexed_area" xml:id="$ID" /></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>link_text_to_group_in_personenregister_as_milestone</String>
+										</field>
+										<field name="name">
+											<String>Link zu Gruppe (Register)</String>
+										</field>
+										<field name="description">
+											<String>Markiert einen Bereich als Link zu einer Gruppe im Personenregister</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>id</String>
+																<String>grup_${id}</String>
+															</entry>
+															<entry>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" type="group" corresp="${ask('ID der Gruppe eingeben - wenn nicht bekannt, bitte leerlassen!')}" /></String>
+															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="indexed_area" xml:id="$ID" /></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+                                    <action>
+										<field name="id">
+											<String>link_text_to_work_in_werkregister_as_milestone</String>
+										</field>
+										<field name="name">
+											<String>Link zu Werk (Register)</String>
+										</field>
+										<field name="description">
+											<String>Markiert einen Bereich als Link zu einem Werk im Werkregister</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>id</String>
+																<String>work_${id}</String>
+															</entry>
+															<entry>
+																<String>first element</String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" type="work" corresp="${ask('ID des Werks eingeben - wenn nicht bekannt, bitte leerlassen!')}" /></String>
+															</entry>
+															<entry>
+																<String>second element</String>
+																<String>&lt;anchor xmlns="http://www.tei-c.org/ns/1.0" type="indexed_area" xml:id="$ID" /></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
 											<String>hervorhebung_underlined</String>
 										</field>
 										<field name="name">
@@ -3914,7 +4238,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											</toolbar>
 											<toolbar>
 												<field name="id">
-													<String>Verweise und Lemmata</String>
+													<String>Entitäten und Lemmata</String>
 												</field>
 												<field name="type">
 													<Integer>3</Integer>
@@ -3929,22 +4253,42 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 													<toolbarEntry-array>
 														<toolbarItem>
 															<field name="actionID">
+																<String>link_text_to_personenregister_as_milestone</String>
+															</field>
+														</toolbarItem>
+														<!--toolbarItem>
+															<field name="actionID">
 																<String>person</String>
 															</field>
-														</toolbarItem>
+														</toolbarItem-->
 														<toolbarItem>
 															<field name="actionID">
-																<String>ort</String>
+																<String>link_text_to_organization_in_personenregister_as_milestone</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>werk</String>
+																<String>link_text_to_group_in_personenregister_as_milestone</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
+															<field name="actionID">
+																<String>link_text_to_ortsregister_as_milestone</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>link_text_to_work_in_werkregister_as_milestone</String>
+															</field>
+														</toolbarItem>
+														<!--toolbarItem>
 															<field name="actionID">
 																<String>lemma</String>
+															</field>
+														</toolbarItem-->
+														<toolbarItem>
+															<field name="actionID">
+																<String>create_lemma_for_comment_as_milestone</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>
