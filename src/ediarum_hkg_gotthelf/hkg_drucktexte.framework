@@ -2617,7 +2617,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															</entry>
 															<entry>
 																<String>first element</String>
-																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" type="annotations" corresp="" /></String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" type="annotation" corresp="" /></String>
 															</entry>
 															<entry>
 																<String>second element</String>
@@ -3448,7 +3448,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 															</entry>
 															<entry>
 																<String>first element</String>
-																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" type="annotations" spanTo="#$ID" /></String>
+																<String>&lt;index xmlns="http://www.tei-c.org/ns/1.0" type="annotation" spanTo="#$ID" /></String>
 															</entry>
 															<entry>
 																<String>second element</String>
