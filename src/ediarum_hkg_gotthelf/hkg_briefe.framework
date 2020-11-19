@@ -3077,7 +3077,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>link_text_to_group_in_personenregister_as_milestone</String>
+											<String>link_text_to_group_in_personenregister_with_milestones</String>
 										</field>
 										<field name="name">
 											<String>Link zu Gruppe (Register)</String>
@@ -3101,7 +3101,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::stamp or self::addrLine or self::hi or self::salute or self::note or self::char or self::dateline or self::signed or self::stamp or self::ex</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -3131,7 +3131,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
                                     <action>
 										<field name="id">
-											<String>link_text_to_work_in_werkregister_as_milestone</String>
+											<String>link_text_to_work_in_werkregister_with_milestones</String>
 										</field>
 										<field name="name">
 											<String>Link zu Werk (Register)</String>
@@ -3155,7 +3155,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::stamp or self::addrLine or self::hi or self::salute or self::note or self::char or self::dateline or self::signed or self::stamp or self::ex</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -3185,7 +3185,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>link_text_to_organization_in_personenregister_as_milestone</String>
+											<String>link_text_to_organization_in_personenregister_with_milestones</String>
 										</field>
 										<field name="name">
 											<String>Link zu Organisation (Register)</String>
@@ -3239,7 +3239,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>create_lemma_for_comment_as_milestone</String>
+											<String>create_lemma_for_comment_with_milestones</String>
 										</field>
 										<field name="name">
 											<String>Lemma für Stellenkommentar</String>
@@ -3293,7 +3293,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>link_text_to_personenregister_as_milestone</String>
+											<String>link_text_to_personenregister_with_milestones</String>
 										</field>
 										<field name="name">
 											<String>Link zu Person (Register)</String>
@@ -3317,7 +3317,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::stamp or self::addrLine or self::hi or self::salute or self::note or self::char or self::dateline or self::signed or self::stamp or self::ex</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -4461,7 +4461,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>link_text_to_ortsregister_as_milestone</String>
+											<String>link_text_to_ortsregister_with_milestones</String>
 										</field>
 										<field name="name">
 											<String>Link zu Ort (Register)</String>
@@ -4485,7 +4485,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::stamp or self::addrLine or self::hi or self::salute or self::note or self::char or self::dateline or self::signed or self::stamp or self::ex</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -5288,7 +5288,7 @@ cfd:${cfd}</String>
 														</toolbarItem-->
 														<toolbarItem>
 															<field name="actionID">
-																<String>link_text_to_personenregister_as_milestone</String>
+																<String>link_text_to_personenregister_with_milestones</String>
 															</field>
 														</toolbarItem>
 														<!--toolbarItem>
@@ -5298,27 +5298,27 @@ cfd:${cfd}</String>
 														</toolbarItem-->
 														<toolbarItem>
 															<field name="actionID">
-																<String>link_text_to_organization_in_personenregister_as_milestone</String>
+																<String>link_text_to_organization_in_personenregister_with_milestones</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>link_text_to_group_in_personenregister_as_milestone</String>
+																<String>link_text_to_group_in_personenregister_with_milestones</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>link_text_to_ortsregister_as_milestone</String>
+																<String>link_text_to_ortsregister_with_milestones</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>link_text_to_work_in_werkregister_as_milestone</String>
+																<String>link_text_to_work_in_werkregister_with_milestones</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>create_lemma_for_comment_as_milestone</String>
+																<String>create_lemma_for_comment_with_milestones</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>
