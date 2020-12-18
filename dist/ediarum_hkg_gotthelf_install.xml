@@ -8,7 +8,7 @@
         <xt:location href="http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/install/ediarum_hkg_gotthelf.zip" />
         -->
         <xt:location href="https://raw.githubusercontent.com/contra8/Gotthelf-Ediarum/master/dist/ediarum_hkg_gotthelf.zip" />
-        <xt:version>2020.1209.1</xt:version>
+        <xt:version>2020.1218.1</xt:version>
         <xt:oxy_version>17.0+</xt:oxy_version>
         <xt:type>framework</xt:type>
         <xt:author>Christian Achter</xt:author>
@@ -16,6 +16,10 @@
         <xt:description xmlns="http://www.w3.org/1999/xhtml">
             <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/achter_christian/dipl_ing_fh_achter_christian/index_ger.html" target="_blank">Christian Achter</a>.</p>
+            <p><b>Release Note 18.12.2020</b></p>
+            <ul>
+                <li>Briefe und Manuskripte: Weitere XML-Nodes zum Anlegen von Entitäten-Milestones deklariert (via Patricia Zihlmann).</li>
+            </ul>
             <p><b>Release Note 09.12.2020</b></p>
             <ul>
                 <li>Briefe: Bug in Milestones für Entitäten-Deklaration gefixt.</li>

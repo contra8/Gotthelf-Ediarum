@@ -247,7 +247,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::hi or self::note or self::char or self::ex or self::subst or self::del or self::add or self::num or self::retrace or self::sic or self::surplus or self::q or self::item or self::stage or self::speaker or self::redo</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -3223,7 +3223,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::hi or self::note or self::char or self::ex or self::subst or self::del or self::add or self::num or self::retrace or self::sic or self::surplus or self::q or self::item or self::stage or self::speaker or self::redo</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -3335,7 +3335,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::hi or self::note or self::char or self::ex or self::subst or self::del or self::add or self::num or self::retrace or self::sic or self::surplus or self::q or self::item or self::stage or self::speaker or self::redo</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -3389,7 +3389,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::hi or self::note or self::char or self::ex or self::subst or self::del or self::add or self::num or self::retrace or self::sic or self::surplus or self::q or self::item or self::stage or self::speaker or self::redo</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -3443,7 +3443,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::hi or self::note or self::char or self::ex or self::subst or self::del or self::add or self::num or self::retrace or self::sic or self::surplus or self::q or self::item or self::stage or self::speaker or self::redo</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
@@ -3497,7 +3497,7 @@ ancestor-or-self::node()[self::*:row | self::*:list][1][self::*:row]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or self::hi or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied</String>
+														<String>self::head or self::p or self::l or self::item or self::cell or self::titlePart or self::byline or self::docAuthor or self::docImprint or self::pubPlace or self::docDate or or self::note or self::ref or self::lem or self::rdg or self::term or self::orig or self::supplied or self::hi or self::note or self::char or self::ex or self::subst or self::del or self::add or self::num or self::retrace or self::sic or self::surplus or self::q or self::item or self::stage or self::speaker or self::redo</String>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation</String>
