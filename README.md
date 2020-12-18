@@ -5,7 +5,7 @@ Developed by Forschungsstelle Jeremias Gotthelf (FJG - http://gotthelf.unibe.ch)
 
 Lead Developer:
 
-* Christian Achter
+* Christian Achter - https://www.gotthelf.unibe.ch/about_us/staff/achter_christian/dipl_ing_fh_achter_christian/index_eng.html
 
 ## What does it do?
 
