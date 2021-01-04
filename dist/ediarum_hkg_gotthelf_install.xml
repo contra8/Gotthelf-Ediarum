@@ -8,7 +8,7 @@
         <xt:location href="http://hkg.germ.unibe.ch:8080/exist/rest/db/hkgcode/oxygen/frameworks/install/ediarum_hkg_gotthelf.zip" />
         -->
         <xt:location href="https://raw.githubusercontent.com/contra8/Gotthelf-Ediarum/master/dist/ediarum_hkg_gotthelf.zip" />
-        <xt:version>2020.1218.1</xt:version>
+        <xt:version>2021.0104.1</xt:version>
         <xt:oxy_version>17.0+</xt:oxy_version>
         <xt:type>framework</xt:type>
         <xt:author>Christian Achter</xt:author>
