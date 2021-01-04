@@ -5,7 +5,7 @@ Developed by Forschungsstelle Jeremias Gotthelf (FJG - http://gotthelf.unibe.ch)
 
 Lead Developer:
 
-* Christian Achter
+* [Christian Achter](https://www.gotthelf.unibe.ch/about_us/staff/achter_christian/dipl_ing_fh_achter_christian/index_eng.html)
 
 ## What does it do?
 
@@ -46,4 +46,4 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this software. If not, see <http://www.gnu.org/licenses/>.
 
-This framework is especially created for the work on dHKG project.
+This framework is especially created for the work on [dHKG project](https://www.gotthelf.unibe.ch/index_eng.html).
