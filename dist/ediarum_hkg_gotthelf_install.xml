@@ -16,6 +16,10 @@
         <xt:description xmlns="http://www.w3.org/1999/xhtml">
             <p>Oxygen XML-Framework für die Historisch-kritische Gesamtausgabe Jeremias Gotthelf (Drucktexte und Manuskripte). Entwickelt von TELOTA - The Electronic Life of the Academy.</p>
             <p>Weiterentwickelt durch die Forschungsstelle Jeremias Gotthelf (FJG), <a href="https://www.gotthelf.unibe.ch/ueber_uns/personen/achter_christian/dipl_ing_fh_achter_christian/index_ger.html" target="_blank">Christian Achter</a>.</p>
+            <p><b>Release Note 04.01.2021</b></p>
+            <ul>
+                <li>Briefe und Manuskripte: Bug gefixt in xpathCondition der Entitäten via Milestones.</li>
+            </ul>
             <p><b>Release Note 18.12.2020</b></p>
             <ul>
                 <li>Briefe und Manuskripte: Weitere XML-Nodes zum Anlegen von Entitäten-Milestones deklariert (via Patricia Zihlmann).</li>
